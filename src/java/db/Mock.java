@@ -7,7 +7,7 @@ package db;
 
 import java.util.ArrayList;
 import modelos.Produto;
-import modelos.Usuario;
+import modelos.Cliente;
 
 /**
  *
@@ -22,18 +22,18 @@ public class Mock {
     }
     
     private static void createUsers(){
-        ArrayList<Usuario> lista;
+        ArrayList<Cliente> lista;
         
-        if(Usuario.getLista().isEmpty()){
-            lista = Usuario.getLista();
+        if(Cliente.getLista().isEmpty()){
+            lista = Cliente.getLista();
             
-            Usuario admin = new Usuario();
+            Cliente admin = new Cliente();
             admin.setEmail("admin@ifpr.edu.br");
             admin.setSenha("admin");
             admin.setNome("Administrador");
             lista.add(admin);
             
-            Usuario gerente = new Usuario();
+            Cliente gerente = new Cliente();
             gerente.setEmail("gerente@ifpr.edu.br");
             gerente.setSenha("123");
             gerente.setNome("Fulano de Tal");

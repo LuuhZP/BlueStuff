@@ -1,62 +1,73 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelos;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
-/**
- *
- * @author gutol
- */
 public class Produto {
-    private String descricao;
-    private float preco;
-    private boolean oferta;
-    private String imagem;
-    public static ArrayList<Produto> lista = new ArrayList();
 
-    public String getImagem() {
-        return imagem;
-    }
+   private int id;
+   private String titulo;
+   private String descricao;
+   private BigInteger preco;
+   private BigInteger desconto;
+   private int quantidade;
 
-    public void setImagem(String imagem) {
-        this.imagem = imagem;
-    }        
-    
-    public String getDescricao(){
-        return this.descricao;
-    }
-    
-    public void setDescricao(String descricao){
-        this.descricao = descricao;
-    }
+   public static ArrayList<Produto> lista = new ArrayList();
 
-    public float getPreco() {
-        return preco;
-    }
+   public int getId() {
+      return id;
+   }
 
-    public void setPreco(float preco) {
-        this.preco = preco;
-    }
+   public void setId(int id) {
+      this.id = id;
+   }
 
-    public ArrayList<Produto> getLista() {
-        return lista;
-    }
+   public String getTitulo() {
+      return titulo;
+   }
 
-    public void setLista(ArrayList<Produto> lista) {
-        Produto.lista = lista;
-    }
+   public void setTitulo(String titulo) {
+      this.titulo = titulo;
+   }
 
-    public boolean getOferta() {
-        return oferta;
-    }
+   public String getDescricao() {
+      return descricao;
+   }
 
-    public void setOferta(boolean oferta) {
-        this.oferta = oferta;
-    }
-        
-    
+   public void setDescricao(String descricao) {
+      this.descricao = descricao;
+   }
+
+   public BigInteger getPreco() {
+      return preco;
+   }
+
+   public void setPreco(BigInteger preco) {
+      this.preco = preco;
+   }
+
+   public BigInteger getDesconto() {
+      return desconto;
+   }
+
+   public void setDesconto(BigInteger desconto) {
+      this.desconto = desconto;
+   }
+
+   public int getQuantidade() {
+      return quantidade;
+   }
+
+   public void setQuantidade(int quantidade) {
+      this.quantidade = quantidade;
+   }
+
+   public static ArrayList<Produto> getLista() {
+      return lista;
+   }
+
+   public static void setLista(ArrayList<Produto> lista) {
+      Produto.lista = lista;
+   }
+
 }

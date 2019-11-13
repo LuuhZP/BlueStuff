@@ -5,21 +5,21 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Carrinho {
-    
-    private Cliente cliente;
+
+    private Pessoa pessoa;
     private Date dataCriacao;
     private Date dataEnvio;
     private BigDecimal valorTotal;
     private BigDecimal desconto;
-    
+
     private ArrayList<ItemCarrinho> itens = new ArrayList();
 
-    public Cliente getCliente() {
-        return cliente;
+    public Pessoa getCliente() {
+        return pessoa;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
     public Date getDataCriacao() {
@@ -61,5 +61,5 @@ public class Carrinho {
     public void setItens(ArrayList<ItemCarrinho> itens) {
         this.itens = itens;
     }
-    
+
 }

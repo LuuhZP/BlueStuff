@@ -1,6 +1,6 @@
 package modelos;
 
-import java.math.BigDecimal;
+
 import java.util.ArrayList;
 
 public class Produto {
@@ -8,8 +8,9 @@ public class Produto {
    private int id;
    private String titulo;
    private String descricao;
-   private BigDecimal preco;
-   private BigDecimal desconto;
+   private String imagem;
+   private float preco;
+   private float desconto;
    private int quantidade;
 
    public static ArrayList<Produto> lista = new ArrayList();
@@ -38,19 +39,19 @@ public class Produto {
       this.descricao = descricao;
    }
 
-   public BigDecimal getPreco() {
+   public float getPreco() {
       return preco;
    }
 
-   public void setPreco(BigDecimal preco) {
+   public void setPreco(float preco) {
       this.preco = preco;
    }
 
-   public BigDecimal getDesconto() {
+   public float getDesconto() {
       return desconto;
    }
 
-   public void setDesconto(BigDecimal desconto) {
+   public void setDesconto(float desconto) {
       this.desconto = desconto;
    }
 
@@ -68,6 +69,14 @@ public class Produto {
 
    public static void setLista(ArrayList<Produto> lista) {
       Produto.lista = lista;
+   }
+
+   public String getImagem() {
+      return imagem;
+   }
+
+   public void setImagem(String imagem) {
+      this.imagem = imagem;
    }
 
 }

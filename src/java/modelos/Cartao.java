@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Cartao {
-    private Cliente cliente;
+    private Pessoa pessoa;
     private String tipo;
     private String nome;
     private String numero;
     private String digitoVerificador;
     private Date dataValidade;
-    
+
     public static ArrayList<Cartao> lista = new ArrayList();
 
-    public Cliente getCliente() {
-        return cliente;
+    public Pessoa getCliente() {
+        return pessoa;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
     public String getTipo() {
@@ -60,7 +60,7 @@ public class Cartao {
     public void setDataValidade(Date dataValidade) {
         this.dataValidade = dataValidade;
     }
-    
+
     public static ArrayList<Cartao> getLista() {
         return lista;
     }

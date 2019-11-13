@@ -16,8 +16,16 @@ public class Pessoa {
    private String email;
    private String login;
    private String senha;
+   private boolean admin;
 
    public static ArrayList<Pessoa> lista = new ArrayList();
+
+   public boolean login(String login, String senha){
+      for(Pessoa p : lista){
+         
+      }
+      if()
+   }
 
    public String getNome() {
       return nome;
@@ -105,6 +113,14 @@ public class Pessoa {
 
    public static void setLista(ArrayList<Pessoa> lista) {
       Pessoa.lista = lista;
+   }
+
+   public boolean isAdmin() {
+      return admin;
+   }
+
+   public void setAdmin(boolean admin) {
+      this.admin = admin;
    }
 
 }

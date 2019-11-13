@@ -4,8 +4,8 @@ package modelos;
 import java.util.ArrayList;
 
 public class Endereco {
-    
-    private Cliente cliente;
+
+    private Pessoa pessoa;
     private String cep;
     private String rua;
     private String numero;
@@ -13,15 +13,15 @@ public class Endereco {
     private String bairro;
     private String cidade;
     private String estado;
-    
+
     public static ArrayList<Endereco> lista = new ArrayList();
 
-    public Cliente getCliente() {
-        return cliente;
+    public Pessoa getCliente() {
+        return pessoa;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
     public String getCep() {
@@ -79,7 +79,7 @@ public class Endereco {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
+
     public static ArrayList<Endereco> getLista() {
         return lista;
     }
@@ -87,5 +87,5 @@ public class Endereco {
     public static void setLista(ArrayList<Endereco> lista) {
         Endereco.lista = lista;
     }
-    
+
 }

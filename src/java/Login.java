@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -11,10 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelos.Pessoa;
 
-/**
- *
- * @author gutol
- */
 public class Login extends HttpServlet {
 
     @Override
@@ -23,19 +14,19 @@ public class Login extends HttpServlet {
         //obtendo os parâmetros da requisição
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
-
-        /*
+        
+        
+            request.getSession().setAttribute("logado", false);
+        
         //comparar com os dado de login default
-        if(Pessoa.login(email,senha)){
-            //salvando sucesso do login na sessão
+        Pessoa p = Pessoa.login(email,senha);
+        if(p != null){
             request.getSession().setAttribute("logado", true);
-
-            //redirecionar para página de produtos
-            response.sendRedirect("produtos.jsp");
+            request.getSession().setAttribute("pessoa", p);
+            response.sendRedirect("index.jsp");
         }else{
-            //redirecionar para a tela de login
             response.sendRedirect("login.jsp");
         }
-        */
+        
     }
 }

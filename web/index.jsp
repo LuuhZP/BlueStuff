@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : index
     Created on : 21/08/2019, 17:26:44
     Author     : gutol
@@ -6,6 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
 <!DOCTYPE html>
 <html>
@@ -16,16 +18,16 @@
         <link rel="stylesheet" href="css/ofertas.css">
     </head>
     <body>
-        
+
         <jsp:include page="menu.jsp">
             <jsp:param name="item" value="ofertas" />
         </jsp:include>
-        
-        <jsp:useBean id="Produtos" class="modelos.Produto" />            
-        
+
+        <jsp:useBean id="Produtos" class="modelos.Produto" />
+
         <div class="container">
             <h1>Ofertas da Loja!</h1>
-            
+            <%-- %>
             <div class="ofertas">
                 <c:forEach var="p" items="${Produtos.lista}">
                     <c:if test="${p.oferta}">
@@ -37,7 +39,7 @@
                     </c:if>
                 </c:forEach>
             </div>
-        
+            < --%>
         </div>
         <script src="js/bootstrap.min.js"></script>
     </body>

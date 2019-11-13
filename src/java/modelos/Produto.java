@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class Produto {
 
-   private int id;
    private String titulo;
    private String descricao;
    private String imagem;
@@ -14,14 +13,6 @@ public class Produto {
    private int quantidade;
 
    public static ArrayList<Produto> lista = new ArrayList();
-
-   public int getId() {
-      return id;
-   }
-
-   public void setId(int id) {
-      this.id = id;
-   }
 
    public String getTitulo() {
       return titulo;

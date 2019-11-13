@@ -20,12 +20,13 @@ public class Pessoa {
 
    public static ArrayList<Pessoa> lista = new ArrayList();
 
-   //public boolean login(String login, String senha){
-      //for(Pessoa p : lista){
-         
-      //}
-      //if()
-   
+   public static Pessoa login(String login, String senha){
+      for(Pessoa p : lista){
+         if((p.getLogin().equals(login) || p.getEmail().equals(login)) && p.getSenha().equals(senha))
+            return p;
+      }
+      return null;
+   }
 
    public String getNome() {
       return nome;

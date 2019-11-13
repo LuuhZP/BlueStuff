@@ -1,31 +1,92 @@
 Celulares azuis : (https://www.google.com.br/search?hl=pt-BR&tbm=isch&sxsrf=ACYBGNQPxR3eOLSKuzqcW2Q8Ewzbmw3Cgw%3A1572527016032&source=hp&biw=1366&bih=576&ei=p9u6Xej5POfG5OUP0bWOgAw&q=blue+phone+&oq=blue+phone+&gs_l=img.3..0j0i30l9.1282.14341..15787...11.0..0.280.2119.0j15j1......0....1..gws-wiz-img.......0i10j0i19.RKBnvbA7OzA&ved=0ahUKEwio6cDRx8blAhVnI7kGHdGaA8AQ4dUDCAY&uact=5#imgrc=wm9m_-BnSB8N6M:)
+Produto iphonexr = new Produto();
+iphonexr.setTitulo("Iphone XR");
+iphonexr.setDescricao("Compre o iPhone XR em seis lindas cores, com Face ID avançado, chip A12 Bionic e tela Liquid Retina.");
+iphonexr.setPreco(4599.5f);
+iphonexr.setDesconto(false);
+iphonexr.setImagem("https://media.4rgos.it/i/Argos/8672674_R_Z001A?w=750&h=440&qlt=70");
+iphonexr.setQuantidade("80000");
+lista.add(iphonexr);
 
-Iphone XR 128GB Mobile Phone
-https://media.4rgos.it/i/Argos/8672674_R_Z001A?w=750&h=440&qlt=70
 
-Samsung Galaxy J8 64GB Phone
-https://images-na.ssl-images-amazon.com/images/I/51zgxpcZTVL._SL1500_.jpg
+Produto samsungj8 = new Produto();
+samsungj8.setTitulo("Samsung Galaxy J8");
+samsungj8.setDescricao("Smartphone Samsung Galaxy J8 64GB Dual Chip Android 8.0 Tela 6 ´ Octa - Core 1.8.");
+samsungj8.setPreco(1799.5f);
+samsungj8.setDesconto(false);
+samsungj8.setImagem("https://images-na.ssl-images-amazon.com/images/I/51zgxpcZTVL._SL1500_.jpg");
+samsungj8.setQuantidade("469596");
+lista.add(samsungj8);
 
-HUAWEI 3i
-https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/nova-3i/img/huawei_nova3i_kv_back.jpg
+Produto huawe3i = new Produto();
+huawe3i.setTitulo("Huawei 3i");
+huawe3i.setDescricao("O Huawei nova 3i é um smartphone Android de bom nível, ótimo para fotos, que pode satisfazer até o mais exigente dos usuários.");
+huawe3i.setPreco(1999.5f);
+huawe3i.setDesconto(true);
+huawe3i.setImagem("https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/nova-3i/img/huawei_nova3i_kv_back.jpg");
+huawe3i.setQuantidade("34667");
+lista.add(huawe3i);
 
-Samsung A9 SM-A920FZBDXTC
-https://images.samsung.com/is/image/samsung/ph-galaxy-a9-a920-sm-a920fzbdxtc-backvitalityblue-123095331?$PD_GALLERY_L_JPG$
+Produto samsunga9 = new Produto();
+samsunga9.setTitulo("Samsung A9");
+samsunga9.setDescricao("O Samsung Galaxy A9 é um smartphone Android avançado e abrangente em todos os pontos de vista com algumas características excelentes");
+samsunga9.setPreco(1633.5f);
+samsunga9.setDesconto(false);
+samsunga9.setImagem("https://images.samsung.com/is/image/samsung/ph-galaxy-a9-a920-sm-a920fzbdxtc-backvitalityblue-123095331?$PD_GALLERY_L_JPG$");
+samsunga9.setQuantidade("999");
+lista.add(samsunga9);
 
-Vivo Y91i 32GB
-https://n4.sdlcdn.com/imgs/i/e/p/large/Vivo-Ocean-Blue-Vivo-1820-SDL362390693-2-ff0de.jpeg
+Produto realme2 = new Produto();
+realme2.setTitulo("Oppo Realme 2");
+realme2.setDescricao("O Oppo Realme 2 Pro é um smartphone Android avançado e abrangente em todos os pontos de vista com algumas características excelentes");
+realme2.setPreco(699.5f);
+realme2.setDesconto(false);
+realme2.setImagem("https://images-na.ssl-images-amazon.com/images/I/41e2YrS2QbL._SX466_.jpg");
+realme2.setQuantidade("345");
+lista.add(realme2);
 
-Realme 2 64GB
-https://images-na.ssl-images-amazon.com/images/I/41e2YrS2QbL._SX466_.jpg
+Produto vivoy91i = new Produto();
+vivoy91i.setTitulo("Vivo Y91i");
+vivoy91i.setDescricao("O vivo Y91i é um smartphone Android completo, que não tem muito a invejar aos mais avançados dispositivos.");
+vivoy91i.setPreco(1500.5f);
+vivoy91i.setDesconto(false);
+vivoy91i.setImagem("https://n4.sdlcdn.com/imgs/i/e/p/large/Vivo-Ocean-Blue-Vivo-1820-SDL362390693-2-ff0de.jpeg");
+vivoy91i.setQuantidade("346");
+lista.add(vivoy91i);
 
-Xiomi Redmi Y3
-https://i.gadgets360cdn.com/products/large/1556094303_635_xiaomi_redmi_y3.jpg
+Produto redmiy3 = new Produto();
+redmiy3.setTitulo("Xiomi Redmi Y3");
+redmiy3.setDescricao("O Redmi Y3 é um smartphone Android de bom nível, ótimo para fotos, que pode satisfazer até o mais exigente dos usuários");
+redmiy3.setPreco(680.5f);
+redmiy3.setDesconto(false);
+redmiy3.setImagem("https://i.gadgets360cdn.com/products/large/1556094303_635_xiaomi_redmi_y3.jpg");
+redmiy3.setQuantidade("356");
+lista.add(redmiy3);
 
-Samsung Galaxy S4 16GB
-https://www.cellularcountry.com/images/Samsung_Galaxy_S4_16GB_R970C_Android_4G_Navy_Blue_Phone_Cricket_CDMA_51264_01.jpg
+Produto samsungs4 = new Produto();
+samsungs4.setTitulo("Samsung Galaxy S4");
+samsungs4.setDescricao("É um produto com poucos concorrentes em termos de multimídia graças à câmera de 13 megapixels que permite ao Samsung Galaxy S4 I9505 tirar fotos fantásticas");
+samsungs4.setPreco(498.5f);
+samsungs4.setDesconto(false);
+samsungs4.setImagem("https://www.cellularcountry.com/images/Samsung_Galaxy_S4_16GB_R970C_Android_4G_Navy_Blue_Phone_Cricket_CDMA_51264_01.jpg");
+samsungs4.setQuantidade("456");
+lista.add(samsungs4);
 
-Xiomi Mi 9 128GB
-https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Other/2019/07/02/source-img/20190702200210_43294.jpg
+Produto mi9 = new Produto();
+mi9.setTitulo("Xiomi Mi 9");
+mi9.setDescricao("O Xiaomi MI 9 é um smartphone Android com características inovadoras que o tornam uma excelente opção para qualquer tipo de utilização");
+mi9.setPreco(2241.5f);
+mi9.setDesconto(true);
+mi9.setImagem("https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Other/2019/07/02/source-img/20190702200210_43294.jpg");
+mi9.setQuantidade("35678");
+lista.add(mi9);
 
-Oppo A5
-https://i.gadgets360cdn.com/products/large/1530947258_635_oppo_a5.jpg
+Produto oppoa5 = new Produto();
+oppoa5.setTitulo("Oppo A5");
+oppoa5.setDescricao("O Oppo A5 pode ser considerado um modelo intermediário em praticamente qualquer quesito, exceto no chip, que o posicionaria no segmento de entrada");
+oppoa5.setPreco(583.5f);
+oppoa5.setDesconto(false);
+oppoa5.setImagem("https://i.gadgets360cdn.com/products/large/1530947258_635_oppo_a5.jpg");
+oppoa5.setQuantidade("1188");
+lista.add(oppoa5);
+

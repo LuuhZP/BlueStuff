@@ -24,6 +24,7 @@ public class Login extends HttpServlet {
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
 
+        /*
         //comparar com os dado de login default
         if(Pessoa.login(email,senha)){
             //salvando sucesso do login na sessão
@@ -35,5 +36,6 @@ public class Login extends HttpServlet {
             //redirecionar para a tela de login
             response.sendRedirect("login.jsp");
         }
+        */
     }
 }

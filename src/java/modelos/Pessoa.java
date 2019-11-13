@@ -20,12 +20,12 @@ public class Pessoa {
 
    public static ArrayList<Pessoa> lista = new ArrayList();
 
-   public boolean login(String login, String senha){
-      for(Pessoa p : lista){
+   //public boolean login(String login, String senha){
+      //for(Pessoa p : lista){
          
-      }
-      if()
-   }
+      //}
+      //if()
+   
 
    public String getNome() {
       return nome;

@@ -12,7 +12,7 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //obtendo os parâmetros da requisição
-        String email = request.getParameter("email");
+        String email = request.getParameter("login");
         String senha = request.getParameter("senha");
 
         //comparar com os dado de login default

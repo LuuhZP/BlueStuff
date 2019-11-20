@@ -23,25 +23,20 @@
             <h1>Produtos da Minha Loja!</h1>
             
             <%
-                boolean logado = false;
+                
+                Produto produto;
                 
                 if(session != null && 
-                        session.getAttribute("logado") != null){
-                    logado = (boolean)session.getAttribute("logado");
+                        session.getAttribute("prod") != null){
+                    produto = (Produto) session.getAttribute("prod");
                 }
-                
-                if(logado){
+                else{
+                    %>
+                <jsp:forward page="index.jsp" />
+            <%
+                }
             %>
-            
-            <form action="AddProduto" method="post">
-                Descrição: <input name="descricao">
-                Preço: <input name="preco">
-                <input name="teste" value="3" type="hidden">
-                <button type="submit">OK</button>
-            </form>
-
-            <% } %>
-            
+                 
             <table class="table table-striped">
                 <thead>
                     <tr>

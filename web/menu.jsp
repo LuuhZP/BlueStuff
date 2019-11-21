@@ -30,6 +30,15 @@
         <input class="form-control mr-sm-2" type="search" placeholder="O que você proucura?" aria-label="Search" >
         <span class="border border-warning rounded-pill"><button class="btn btn-outline-warning rounded-pill" type="submit">Buscar</button></span>
     </form>
+    
+    <%
+            boolean logado = false;
+            if(session != null && session.getAttribute("logado") != null){
+                logado = (boolean) session.getAttribute("logado");
+            }
+
+            if(!logado){
+        %>
        
     <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
       <p class="text-left">FAÇA O <a href="login.jsp" class="btn-outline-success rounded alert-link text-decoration-none" >LOGIN</a> OU <a href="addPessoa.jsp"class="btn-outline-danger rounded alert-link text-decoration-none" >CADASTRE-SE</a></p>
@@ -43,40 +52,51 @@
 
         </ul>
     </div>
-  
-     
-      <%
-            boolean logado = false;
-            if(session != null && session.getAttribute("logado") != null){
-                logado = (boolean) session.getAttribute("logado");
-            }
-
-            if(logado){
-        %>
-         <li class="nav-item dropdown addActive">
-           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Cadastrar
-           </a>
-           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <a class="dropdown-item" href="addProduto.jsp">Produtos</a>
-             <a class="dropdown-item" href="#">Funcionarios</a>
-           </div>
-         </li>
-         <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Gerenciar
-           </a>
-           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <a class="dropdown-item" href="#">Produtos</a>
-             <a class="dropdown-item" href="#">Clientes</a>
-           </div>
-         </li>
-         
-      <%
-            }
-        %>
-    </ul>
-  </div>
+    <% } else{ %>
+    
+    <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
+        <a href="login.jsp" class="btn btn-success rounded alert-link text-decoration-none" >ESTOQUE</a>
+    </span>
+    
+    <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
+        <a href="login.jsp" class="btn btn-danger rounded alert-link text-decoration-none" >SAIR</a>
+    </span>
+    
+    <div class="d-flex flex-row-reverse ">
+        <ul class="list-unstyled">
+            <li class="nav-item dropdown addActive">
+                <img src="images/icones/icons8-usuário-masculino-64.png" width="30px"/>
+                <a class=" dropdown-toggle btn-outline-warning rounded text-decoration-none text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PESSOAS</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="addPessoa.jsp">Cadastrar</a>
+                    <a class="dropdown-item" href="#">Modificar</a>
+                    <a class="dropdown-item" href="#">Excluir</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown addActive">
+                <img src="images/icones/icons8-editar-64.png" width="30px"/>
+                <a class="dropdown-toggle btn-outline-warning rounded text-decoration-none text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUTOS</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="addPessoa.jsp">Cadastrar</a>
+                    <a class="dropdown-item" href="#">Modificar</a>
+                    <a class="dropdown-item" href="#">Excluir</a>
+                    <a class="dropdown-item" href="#">Desconto</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown addActive">
+                <img src="images/icones/icons8-excluir-64.png" width="30px" />
+                <a class="dropdown-toggle btn-outline-warning rounded text-decoration-none text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CUPONS</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="addProduto.jsp">Adicionar</a>
+                    <a class="dropdown-item" href="#">Remover</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <% } %>
+        
+           
+      
 </nav>
 <% if(navInferior){ %>
 <nav class="navbar navbar-expand-lg navbar-light" style=" margin-top: -20px; background-color: #5fa8d3">

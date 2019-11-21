@@ -26,6 +26,7 @@
 
         if(logado){
             session.setAttribute("logado", false);
+            response.sendRedirect("login.jsp");
         }
     %>
        

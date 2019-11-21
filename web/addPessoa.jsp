@@ -46,7 +46,7 @@
                 </li>
             </ul>
             
-            <form class="form" action="" method="post">
+            <form class="form" action="AddPessoa" method="post">
             
             <div class="tab-content">
                     <!-- action="addPessoa" -->
@@ -58,14 +58,14 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Nome</span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
+                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="nome">
                                 </div>
 
                                 <div class="input-group-lg mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">RG</span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
+                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="RG">
                                 </div>
 
 
@@ -73,18 +73,18 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">CPF</span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
+                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="CPF">
                                 </div>
 
                                 <div class="input-group-lg mb-3">
                                     <div class="input-group-prepend">
                                         <label class="input-group-text text-white" for="inputGroupSelect01" style="background-color: #1b4965;">Sexo:</label>
                                     </div>
-                                    <select class="custom-select" name="">
+                                    <select class="custom-select" name="sexo">
                                         <option selected> </option>
                                         <option value="M">Masculino</option>
                                         <option value="F">Feminino</option>
-                                        <option value="F">Indefinido</option>
+                                        <option value="I">Indefinido</option>
                                     </select>
                                 </div>
 
@@ -93,7 +93,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Telefone:</span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
+                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="telefone">
                                 </div>
 
 
@@ -101,7 +101,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Data de Nascimento:</span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
+                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="dataNas">
                                 </div>
                             </div>
                         
@@ -117,7 +117,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Email:</span>
                                 </div>
-                                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
+                                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="email">
                             </div>
 
 
@@ -125,7 +125,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Senha:</span>
                                 </div>
-                                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
+                                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="senha">
                             </div>
 
 
@@ -133,7 +133,7 @@
                                 <div class="input-group-prepend">
                                     <label class="input-group-text text-white" for="inputGroupSelect01" style="background-color: #1b4965;">Admin:</label>
                                 </div>
-                                <select class="custom-select" name="">
+                                <select class="custom-select" name="admin">
                                     <option selected> </option>
                                     <option value="true">Sim</option>
                                     <option value="false">Não</option>
@@ -162,106 +162,3 @@
 
     </body>
 </html>
-
-<!--
-        <div class="container" style="align-items: center; padding-top: 40px; padding-bottom: 40px;">
-
-            <h1 style="margin-bottom: 40px  ">Adicionar Pessoa</h1>
-
-            <form class="form" action="AddProduto" method="post">
-
-                <div class="form-group">
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">RG</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
-                    </div>
-
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">CPF</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">Sexo:</label>
-                        </div>
-                        <select class="custom-select" name="">
-                            <option selected> </option>
-                            <option value="M">Masculino</option>
-                            <option value="F">Feminino</option>
-                            <option value="F">Indefinido</option>
-                        </select>
-                    </div>
-                    
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Telefone:</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
-                    </div>
-
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Data de Nascimento:</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
-                    </div>
-
-                    
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">CEP:</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
-                    </div>
-                        
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Email:</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
-                    </div>
-                    
-                    
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Senha:</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
-                    </div>
-                    
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">Admin:</label>
-                        </div>
-                        <select class="custom-select" name="">
-                            <option selected> </option>
-                            <option value="true">Sim</option>
-                            <option value="false">Não</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-warning btn-lg">Adicionar Pessoa</button>
-
-                </div>
-
-            </form>
-        </div>
--->

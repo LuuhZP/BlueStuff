@@ -16,6 +16,10 @@
         <servlet-name>Produtos</servlet-name>
         <servlet-class>Produtos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddPessoa</servlet-name>
+        <servlet-class>AddPessoa</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Teste</servlet-name>
         <url-pattern>/Teste</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>Produtos</servlet-name>
         <url-pattern>/Produtos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddPessoa</servlet-name>
+        <url-pattern>/AddPessoa</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

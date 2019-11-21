@@ -82,7 +82,7 @@
                         <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="preco">
                     </div>
 
-                    <button type="submit" class="btn btn-warning">OK</button>
+                    <button type="submit" class="btn btn-lg" style="background-color: #1b4965; color: white;">Adicionar Produto</button>
 
                 </div>
 

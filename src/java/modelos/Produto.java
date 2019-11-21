@@ -15,7 +15,6 @@ public class Produto {
    public static ArrayList<Produto> lista = new ArrayList();
    
    public static Produto getProduto(String busca){
-       System.out.println(busca);
        String buscar = busca.replaceAll("-", " ");
        for(Produto p : Produto.lista){
            if(p.getTitulo().equals(buscar))

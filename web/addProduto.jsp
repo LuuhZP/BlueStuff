@@ -31,9 +31,12 @@
             
             if(logado & pessoa.isAdmin()){
         %>
-         <jsp:include page="menu.jsp">
+        
+        
+        <jsp:include page="menu.jsp">
             <jsp:param name="item" value="ofertas" />
         </jsp:include>
+         
          
          
         <div class="container" style="align-items: center; padding-top: 40px; padding-bottom: 40px;">

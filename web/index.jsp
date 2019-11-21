@@ -7,8 +7,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-
 <!DOCTYPE html>
 <html>
     <head>

@@ -22,10 +22,8 @@ public class Pessoa {
 
    public static Pessoa login(String login, String senha){
       for(Pessoa p : Pessoa.lista){
-         if(!p.getSenha().equals(senha) || !p.getEmail().equals(login) && !p.getLogin().equals(login)) {
-          } else {
+         if(login.equals(p.getLogin()) && senha.equals(p.getSenha()))
              return p;
-          }
       }
       return null;
    }

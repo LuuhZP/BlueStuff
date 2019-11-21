@@ -37,9 +37,9 @@
 
     <div class="d-flex flex-row-reverse ">
         <ul class="list-unstyled">
-            <li><img src="images/icones/icons8-usuário-masculino-64.png" alt="" width="30px"/><a href="#" class="btn-outline-warning rounded text-decoration-none text-white" >  MEU CADASTRO</a></li>
-            <li><img src="images/icones/icons8-carrinho-de-compras-64.png" alt="" width="30px"/><a href="#" class="btn-outline-warning rounded text-decoration-none text-white" >  MEU CARRINHO</a></li>
-            <li><img src="images/icones/icons8-produto-64.png" alt="" width="30px"/><a href="#" class="btn-outline-warning rounded text-decoration-none text-white" >  MEUS PEDIDOS</a></li>
+            <li><img src="images/icones/icons8-usuário-masculino-64.png" width="30px"/><a href="#" class="btn-outline-warning rounded text-decoration-none text-white" >  MEU CADASTRO</a></li>
+            <li><img src="images/icones/icons8-carrinho-de-compras-64.png" width="30px"/><a href="carrinho.jsp" class="btn-outline-warning rounded text-decoration-none text-white" >  MEU CARRINHO</a></li>
+            <li><img src="images/icones/icons8-produto-64.png" width="30px"/><a href="#" class="btn-outline-warning rounded text-decoration-none text-white" >  MEUS PEDIDOS</a></li>
 
         </ul>
     </div>

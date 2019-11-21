@@ -54,31 +54,31 @@
 
                             <div class="form-group">
 
-                                <div class="input-group mb-3">
+                                <div class="input-group-lg mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+                                        <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Nome</span>
                                     </div>
                                     <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
                                 </div>
 
-                                <div class="input-group mb-3">
+                                <div class="input-group-lg mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-default">RG</span>
+                                        <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">RG</span>
                                     </div>
                                     <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
                                 </div>
 
 
-                                <div class="input-group mb-3">
+                                <div class="input-group-lg mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-default">CPF</span>
+                                        <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">CPF</span>
                                     </div>
                                     <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
                                 </div>
 
-                                <div class="input-group mb-3">
+                                <div class="input-group-lg mb-3">
                                     <div class="input-group-prepend">
-                                        <label class="input-group-text" for="inputGroupSelect01">Sexo:</label>
+                                        <label class="input-group-text text-white" for="inputGroupSelect01" style="background-color: #1b4965;">Sexo:</label>
                                     </div>
                                     <select class="custom-select" name="">
                                         <option selected> </option>
@@ -89,17 +89,17 @@
                                 </div>
 
 
-                                <div class="input-group mb-3">
+                                <div class="input-group-lg mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-default">Telefone:</span>
+                                        <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Telefone:</span>
                                     </div>
                                     <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
                                 </div>
 
 
-                                <div class="input-group mb-3">
+                                <div class="input-group-lg mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-default">Data de Nascimento:</span>
+                                        <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Data de Nascimento:</span>
                                     </div>
                                     <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
                                 </div>
@@ -113,25 +113,25 @@
 
                     <div id="menu1" class="container tab-pane fade"><br>
                         <div class="form-group">
-                            <div class="input-group mb-3">
+                            <div class="input-group-lg mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default">Email:</span>
+                                    <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Email:</span>
                                 </div>
                                 <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
                             </div>
 
 
-                            <div class="input-group mb-3">
+                            <div class="input-group-lg mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default">Senha:</span>
+                                    <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965;">Senha:</span>
                                 </div>
                                 <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="">
                             </div>
 
 
-                            <div class="input-group mb-3">
+                            <div class="input-group-lg mb-3">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="inputGroupSelect01">Admin:</label>
+                                    <label class="input-group-text text-white" for="inputGroupSelect01" style="background-color: #1b4965;">Admin:</label>
                                 </div>
                                 <select class="custom-select" name="">
                                     <option selected> </option>

@@ -13,6 +13,16 @@ public class Produto {
    private int quantidade;
 
    public static ArrayList<Produto> lista = new ArrayList();
+   
+   public static Produto getProduto(String busca){
+       System.out.println(busca);
+       String buscar = busca.replaceAll("-", " ");
+       for(Produto p : Produto.lista){
+           if(p.getTitulo().equals(buscar))
+               return p;
+       }
+       return null;
+   }
 
    public String getTitulo() {
       return titulo;
@@ -69,5 +79,11 @@ public class Produto {
    public void setImagem(String imagem) {
       this.imagem = imagem;
    } 
+
+    @Override
+    public String toString() {
+        return titulo.replaceAll(" ", "-");
+    }  
+   
    
 }

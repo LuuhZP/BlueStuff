@@ -11,8 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <title>Add Produto</title>
     </head>
     <body >
         
@@ -29,15 +28,15 @@
                 pessoa = (Pessoa)session.getAttribute("pessoa");
             }
             
-            if(logado & pessoa.isAdmin()){
+            if(!logado || !pessoa.isAdmin())
+                response.sendRedirect("login.jsp");
+            else{
         %>
         
         
         <jsp:include page="menu.jsp">
-            <jsp:param name="navInferior" value="1" />
+            <jsp:param name="navInferior" value="0" />
         </jsp:include>
-         
-         
          
         <div class="container" style="align-items: center; padding-top: 40px; padding-bottom: 40px;">
             
@@ -47,39 +46,38 @@
                 
                 <div class="form-group">
                     
-                    <div class="input-group mb-3">
+                    <div class="input-group-lg mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+                            <span class="input-group-text text-white " id="inputGroup-sizing-default" style="background-color: #1b4965; ">Nome</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="descricao">
                     </div>
                     
-                    <div class="input-group mb-3">
+                    <div class="input-group-lg mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Titulo</span>
+                            <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965; ">Titulo</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="descricao">
                     </div>
 
                     
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Descricao</span>
+                    <div class="input-group-lg mb-3" >
+                        <div class="input-group-prepend" >
+                            <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965; ">Descricao</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="descricao">
                     </div>
                     
-                    <div class="input-group mb-3">
+                    <div class="input-group-lg mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Imagem:</span>
+                            <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965; ">Imagem:</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="imagem">
                     </div>
 
-                    <div class="input-group mb-3">
+                    <div class="input-group-lg mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">R$</span>
-                            <span class="input-group-text">0.00</span>
+                            <span class="input-group-text text-white" style="background-color: #1b4965; ">Preço</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="preco">
                     </div>
@@ -91,15 +89,7 @@
             </form>
         </div>
                             
-                            <%
-                            }
-                else {
-
-               %>     
-                    <jsp:forward page="index.jsp" />
-                    <%
-                }
-              %>
+        <% } %>
 
     </body>
 </html>

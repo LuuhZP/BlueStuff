@@ -9,13 +9,13 @@
 <html>
     <head>
         <title>Login</title>
-       
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">      
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="login.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
-    <body class="text-center">
-       
+    <body style=" background-color: #cae9ff">
+        
+        <jsp:include page="menu.jsp">
+            <jsp:param name="navInferior" value="0" />
+        </jsp:include>
     <%
         boolean logado = false;
 
@@ -29,19 +29,16 @@
         }
     %>
        
-     <div class="container" style="margin-top: 10%">
+     <div class="container" style="width: 33%; display: block; margin-left: 33%">
          
-         <jsp:include page="menu.jsp">
-            <jsp:param name="item" value="ofertas" />
-        </jsp:include>
          <form class="form-signin" action="Login" method="post" >
-            <img class="mb-4" src="images/logo_transparent (4).png" alt="" width="150" height="150">
-            <label for="inputEmail" class="sr-only">Login ou Email </label>
-            <input name="login" id="inputEmail" class="form-control" placeholder="Login ou Email" required="" autofocus="">
+             <img class="mb-4" src="images/logo_transparent.png" alt="" style="width: 33%; margin-left: 33%;">
+             <label for="inputEmail" class="sr-only">Login ou Email </label>
+            <input name="login" id="inputEmail" class="form-control" placeholder="Login ou Email">
 
             <label for="inputPassword" class="sr-only">Senha</label>
-            <input name="senha" type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
-            <button class="submit" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <input name="senha" type="password" id="inputPassword" class="form-control" placeholder="Senha">
+            <button class="btn btn-success btn-lg btn-block" type="button" style="margin-top: 10%">Entrar</button>
          </form>
       </div>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

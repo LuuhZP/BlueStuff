@@ -13,7 +13,21 @@
         <title>Minha Loja</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
-    <body>                
+    <body>     
+        
+        <%
+            Produto produto;
+
+            if(session != null && 
+                    session.getAttribute("prod") != null){
+                produto = (Produto) session.getAttribute("prod");
+            }
+            else{
+                %>
+                <jsp:forward page="index.jsp" />
+                <%
+            }
+            %>
         
         <jsp:include page="menu.jsp">
             <jsp:param name="item" value="produtos" />
@@ -21,45 +35,6 @@
         
         <div class="container">
             <h1>Produtos da Minha Loja!</h1>
-            
-            <%
-                
-                Produto produto;
-                
-                if(session != null && 
-                        session.getAttribute("prod") != null){
-                    produto = (Produto) session.getAttribute("prod");
-                }
-                else{
-                    %>
-                <jsp:forward page="index.jsp" />
-            <%
-                }
-            %>
-                 
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Descrição</th>
-                        <th>Valor</th>
-                    </tr>
-                </thead>
-                <tbody>
-            <%
-                for(int i=0; i<Produto.lista.size(); i++){
-
-                    Produto p = Produto.lista.get(i);
-                    out.println("<tr>");
-                    out.println("<td> "+ (i+1) +" </td>");
-                    out.println("<td> "+ p.getDescricao() +" </td>");
-                    out.println("<td> "+ p.getPreco() +" </td>");
-                    out.println("</tr>");
-                }
-
-            %>
-                </tbody>
-            </table>
             
         </div>
         <script src="js/bootstrap.min.js"></script>

@@ -132,7 +132,6 @@
                             </tbody>
 
                         </table>
-                        <a href="produtos.jsp" class="btn btn-lg py-2 mb-4" style="background-color: #1b4965; color: white">Continuar Comprando</a>
                     </div>    
                 </div>
 

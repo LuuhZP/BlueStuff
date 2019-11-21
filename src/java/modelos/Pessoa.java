@@ -21,9 +21,11 @@ public class Pessoa {
    public static ArrayList<Pessoa> lista = new ArrayList();
 
    public static Pessoa login(String login, String senha){
-      for(Pessoa p : lista){
-         if((p.getLogin().equals(login) || p.getEmail().equals(login)) && p.getSenha().equals(senha))
-            return p;
+      for(Pessoa p : Pessoa.lista){
+         if(!p.getSenha().equals(senha) || !p.getEmail().equals(login) && !p.getLogin().equals(login)) {
+          } else {
+             return p;
+          }
       }
       return null;
    }

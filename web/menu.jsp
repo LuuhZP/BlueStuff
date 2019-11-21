@@ -32,7 +32,7 @@
     </form>
        
     <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
-      <p class="text-left">FAÇA O <a href="login.jsp" class="btn-outline-success rounded alert-link text-decoration-none" >LOGIN</a> OU <a href="#"class="btn-outline-danger rounded alert-link text-decoration-none" >CADASTRE-SE</a></p>
+      <p class="text-left">FAÇA O <a href="login.jsp" class="btn-outline-success rounded alert-link text-decoration-none" >LOGIN</a> OU <a href="addPessoa.jsp"class="btn-outline-danger rounded alert-link text-decoration-none" >CADASTRE-SE</a></p>
     </span>
 
     <div class="d-flex flex-row-reverse ">

@@ -23,14 +23,12 @@
                 produto = (Produto) session.getAttribute("prod");
             }
             else{
-                %>
-                <jsp:forward page="index.jsp" />
-                <%
+                response.sendRedirect("index.jsp");
             }
             %>
         
         <jsp:include page="menu.jsp">
-            <jsp:param name="item" value="produtos" />
+            <jsp:param name="navInferior" value="1" />
         </jsp:include>
         
         <div class="container">

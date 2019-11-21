@@ -27,8 +27,8 @@ public class Mock {
             lista.add(admin);
 
             Pessoa gerente = new Pessoa();
-            gerente.setEmail("gerente@ifpr.edu.br");
-            gerente.setSenha("123");
+            gerente.setLogin("gerente@ifpr.edu.br");
+            gerente.setSenha("admin");
             gerente.setNome("Fulano de Tal");
             gerente.setAdmin(true);
             lista.add(gerente);

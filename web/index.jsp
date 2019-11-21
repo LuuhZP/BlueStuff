@@ -7,13 +7,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<<<<<<< HEAD
-=======
 <%@page import="modelos.Produto"%>
 
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
->>>>>>> f5730083fb1613dcd4dd85a81febb181548ad93e
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,7 +22,7 @@
     <body>
 
         <jsp:include page="menu.jsp">
-            <jsp:param name="item" value="ofertas" />
+            <jsp:param name="navInferior" value="1" />
         </jsp:include>
 
         <jsp:useBean id="Produtos" class="modelos.Produto" />

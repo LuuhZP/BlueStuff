@@ -38,7 +38,7 @@
 
             <label for="inputPassword" class="sr-only">Senha</label>
             <input name="senha" type="password" id="inputPassword" class="form-control" placeholder="Senha">
-            <button class="btn btn-success btn-lg btn-block" type="button" style="margin-top: 10%">Entrar</button>
+            <button class="btn btn-success btn-lg btn-block" type="submit" style="margin-top: 10%">Entrar</button>
          </form>
       </div>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

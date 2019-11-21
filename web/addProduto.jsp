@@ -34,7 +34,7 @@
         
         
         <jsp:include page="menu.jsp">
-            <jsp:param name="item" value="ofertas" />
+            <jsp:param name="navInferior" value="1" />
         </jsp:include>
          
          

@@ -7,6 +7,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<<<<<<< HEAD
+=======
+<%@page import="modelos.Produto"%>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+>>>>>>> f5730083fb1613dcd4dd85a81febb181548ad93e
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,20 +31,33 @@
         <jsp:useBean id="Produtos" class="modelos.Produto" />
 
         <div class="container">
-            <h1>Ofertas da Loja!</h1>
-            <%-- %>
-            <div class="ofertas">
-                <c:forEach var="p" items="${Produtos.lista}">
-                    <c:if test="${p.oferta}">
-                        <div>
-                            <h5> ${p.descricao} </h5>
-                            <p> R$ ${p.preco} </p>
-                            <img src="${p.imagem}"></img>
-                        </div>
-                    </c:if>
-                </c:forEach>
-            </div>
-            < --%>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <%
+                for(int i=0; i<Produtos.lista.size(); i++){
+                    Produto p = Produtos.lista.get(i);
+                %>
+                    <tr>
+                    <td> <%=(i+1)%> </td>
+                    <td> <%=p.getDescricao()%> </td>
+                    <td> <%=p.getPreco()%> </td>
+                    <td> <a class="btn btn-lg btn-primary btn-block" href="produtos.jsp?prod=<%=p%>" >Go</a> 
+                    
+                    </td>
+                    </tr>
+                    <%
+                }
+
+            %>
+                </tbody>
+            </table>
         </div>
         <script src="js/bootstrap.min.js"></script>
     </body>

@@ -12,6 +12,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Minha Loja</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>     
         
@@ -28,130 +32,115 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Shopping cart table -->
-                <div class="col-lg-8">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col" class="border-0" style="background-color: #1b4965">
-                                        <div class="p-3 px-3 text-uppercase" style="color: white">Produto</div>
-                                    </th>
-                                    <th scope="col" class="border-0" style="background-color: #1b4965">
-                                        <div class="py-3 text-uppercase" style="color: white">Preço</div>
-                                    </th>
-                                    <th scope="col" class="border-0" style="background-color: #1b4965">
-                                        <div class="py-3 text-uppercase" style="color: white">Quantidade</div>
-                                    </th>
-                                    <th scope="col" class="border-0" style="background-color: #1b4965">
-                                        <div class="py-3 text-uppercase" style="color: white">Remover</div>
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                            <tr>
-                                <th scope="row" class="border-0">
-                                    <div class="p-3">
-                                        <img src="<%//out.println(c.getImagem());%>" alt="" width="70" class="img-fluid rounded shadow-sm">
-                                        <div class="ml-4 d-inline-block align-middle">
-                                            <h5 class="mb-0 text-dark d-inline-block align-middle"><%//out.println(c.getNome());%></h5>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td class="border-0 align-middle"><strong>R$<%//out.println(c.getPreco());
-                      //subtotal += (c.getPreco() * c.getQtd());%></strong></td>
-                                <td class="border-0 align-middle">
-                                    <div class="row align-items-centerg">
-                                        <form action="Button_Add" method="post">
-                                            <button type="submit" class="btn" name="add"  style="background-color: #1b4965; color: white" value="<%%>"><i class="fa fa fa-plus"></i></button>
-                                        </form>                         
-                                        <strong class="mt-2 ml-2"><%//out.println(c.getQtd());%></strong>
-                                        <form action="Button_Del" method="post">
-                                            <button type="submit" class="btn ml-2" name="del" style="background-color: #1b4965; color: white"  value="<%%>"><i class="fa fa-minus"></i></button>
-                                        </form>
-                                    </div>
-                                </td>
-                                <td class="border-0 align-middle">
-                                    <form action="RemoveProduct" method="post">
-                                        <button type="submit" class="btn" name="button" style="background-color: #1b4965; color: white"  value="<%%>"><i class="fa fa-trash"></i></button>
-                                    </form>
-                                </td>
-                            </tr>
-                            <%
-                           // } else {
-                            %>
-                            <tr>
-                                <th scope="row">
-                                    <div class="p-3">
-                                        <img src="<%//out.println(c.getImagem());%>" alt="" width="70" class="img-fluid rounded shadow-sm">
-                                        <div class="ml-4 d-inline-block align-middle">
-                                            <h5 class="mb-0 text-dark d-inline-block"><%//out.println(c.getNome());%></h5>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td class="align-middle"><strong>R$<%//out.println(c.getPreco());
-                     // subtotal += (c.getPreco() * c.getQtd());%></strong></td>
-                                <td class="align-middle">
-                                    <div class="row">
-                                        <form action="Button_Add" method="post">
-                                            <button type="submit" class="btn" name="add" style="background-color: #1b4965; color: white"  value="<%%>"><i class="fa fa fa-plus"></i></button>
-                                        </form>
-                                        <strong class="ml-2 mt-2"><%//out.println(c.getQtd());%></strong>
-                                        <form action="Button_Del" method="post">
-                                            <button type="submit" class="btn ml-2" name="del" style="background-color: #1b4965; color: white" value="<%%>"><i class="fa fa-minus"></i></button>
-                                        </form>
-                                    </div>
-                                </td>
-                                <td class="align-middle">
-                                    <form action="RemoveProduct" method="post">
-                                        <button type="submit" class="btn" name="button" style="background-color: #1b4965; color: white"  value="<%%>"><i class="fa fa-trash"></i></button>
-                                    </form>
-                                </td>
-                            </tr>
-                            <%
-                                    //}
-                               // }
-                            %>
-                            </tbody>
-
-                        </table>
-                        <a href="produtos.jsp" class="btn btn-lg py-2 mb-4" style="background-color: #1b4965; color: white">Continuar Comprando</a>
+                <div class="col-lg-5" style="height: 380px; background-color: #1b4965">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 350px; margin-top: 5%">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" >
+                            <div class="carousel-item active">
+                                <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="d-block w-100" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto">
+                            </div>
+                            <div class="carousel-item" style="">
+                                <img src="https://images.tcdn.com.br/img/img_prod/698958/borracha_faber_castell_tons_pastel_fc_max_191_1_20190625134314.jpg" class="d-block w-100" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="margin-left: -6%">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="margin-right: -6%">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>    
                 </div>
-
+                                        
+<%--       COLUNA LATERAL      --%>
                 <div class="col-md">
-                    <div class="text-light px-4 py-4 text-uppercase font-weight-bold" style="height: 80px; background-color: #1b4965">Pedido</div>
+                    <div class="text-light text-center px-4 py-4 text-uppercase font-weight-bold" style="height: 45px;  margin: auto; background-color: #1b4965; font-size: 120%"><%= produto.getTitulo() %></div>
                     <div class="p-3">
-                        <p class="font-italic mb-4">Os custos de envio e adicionais são calculados com base nos valores inseridos.</p>
+                        <p class="font-italic mb-4"><%= produto.getDescricao() %></p>
                         <ul class="list-unstyled mb-4">
-                            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Envio e manejo</strong><strong>R$<%
-                              
-                                //if (subtotal == 0) {
-                                //    out.print("0");
-                                //    Carrinho.setSubtotal(subtotal);
-                                //} else {
-                                //    out.print("10");
-                                //}
-                                 %></strong></li>
-                            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Taxa</strong><strong>R$0.00</strong></li>
-                            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                                <h5 class="font-weight-bold">R$<%
-                                    //if (subtotal == 0) {
-                                    //    out.print("0");
-                                    //} else {
-                                    //    out.print(subtotal + 10);
-                                    //    Carrinho.setSubtotal(subtotal + 10);
-                                    //}
-                                    %>.00</h5>
+                            <% if(produto.getDesconto() != 0){ %>
+                            <li class="d-flex justify-content-between py-3 border-top "><strong class="text-muted">Preço</strong><strong>R$<%= produto.getPreco() %></strong></li>
+                            <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Desconto</strong><strong>R$<%= produto.getDesconto() %></strong></li>
+                            <% }%>
+                            <li class="border-top"><strong class="text-muted">Total:</strong>
+                                <h2 class="font-weight text-center" style="font-size: 65px">R$<%= (produto.getPreco() - produto.getDesconto()) %></h2>
                             </li>
                         </ul>
-                        <a href="pagamento.jsp" class="btn btn-lg btn-block" style="background-color: #1b4965; color: white">Finalizar Compra</a>
+                        <a href="pagamento.jsp" class="btn btn-lg btn-block" style="background-color: #1b4965; color: white">Adicionar ao Carrinho</a>
                     </div>
                 </div>
             </div>
-
+            <%-- Sujestoes --%>
+            <div>
+                <div style="height: 250px; background-color: #5fa8d3">
+                    <div id="carousel2" class="carousel slide" data-ride="carousel" style="height: 230px; margin-top: 10px">
+                        <div class="carousel-inner" >                            
+                            <div class="carousel-item active">
+                                <div class="card-deck" style="max-width:90%; max-height:230px; width: auto; height: auto; margin: auto; margin-top: 10px;">
+                                    <a href="produtos.jsp?prod=caneta-bic-azul" class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
+                                        <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
+                                        <div class="card-body">
+                                            <h5 class="card-title font-weight" style="font-size: 15px">Caneta Bic Azul</h5>
+                                            <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
+                                        </div>
+                                    </a>
+                                    <div class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
+                                        <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
+                                        <div class="card-body">
+                                            <h5 class="card-title font-weight" style="font-size: 15px">Caneta Bic Azul</h5>
+                                            <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
+                                        <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
+                                        <div class="card-body">
+                                            <h5 class="card-title font-weight" style="font-size: 15px">Caneta Bic Azul</h5>
+                                            <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
+                                        <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
+                                        <div class="card-body">
+                                            <h5 class="card-title font-weight" style="font-size: 15px">Caneta Bic Azul</h5>
+                                            <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.tcdn.com.br/img/img_prod/698958/borracha_faber_castell_tons_pastel_fc_max_191_1_20190625134314.jpg" class="d-block w-100" style="max-width:80%; max-height:300px; width: auto; height: auto; margin: auto;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev" style="margin-left: -6%">
+                            <span class="control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next" style="margin-right: -6%; color: white ">
+                            <span class="control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>    
+                </div>
+            </div>
+                            AEIOU
         </div>
-        <script src="js/bootstrap.min.js"></script>
+        
+                            
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

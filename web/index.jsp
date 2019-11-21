@@ -43,7 +43,7 @@
                 %>
                     <tr>
                     <td> <%=(i+1)%> </td>
-                    <td> <%=p.getDescricao()%> </td>
+                    <td> <%=p.getTitulo()%> </td>
                     <td> <%=p.getPreco()%> </td>
                     <td> <a class="btn btn-lg btn-primary btn-block" href="produtos.jsp?prod=<%=p%>" >Go</a> 
                     

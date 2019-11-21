@@ -44,8 +44,10 @@ public class Mock {
             lista = Produto.lista;
 
             Produto caneta = new Produto();
-            caneta.setTitulo("Caneta Bic");
-            caneta.setPreco(1.5f);
+            caneta.setTitulo("Caneta Bic Azul");
+            caneta.setDescricao("Caneta Esferogáfica de cor Azul fabricada pela empresa BIC. Possui ponta de espeçura 3mm e comprimento de 15cm aaaa a a a a a aaaaaa a  aaaaaa a a a aaa a aa aa aaaaaa aaaa aaa  aaaa aaa a");
+            caneta.setPreco(1.50f);
+            caneta.setDesconto(0.20f);
             caneta.setImagem("http://www.bavatos.com.br/content/images/thumbs/0001016_caneta-esf-cristal-azul-bic_580.jpeg");
             lista.add(caneta);
 

@@ -85,8 +85,20 @@
                 <div style="height: 250px; background-color: #5fa8d3">
                     <div id="carousel2" class="carousel slide" data-ride="carousel" style="height: 230px; margin-top: 10px">
                         <div class="carousel-inner" >                            
-                            <div class="carousel-item active">
-                                <div class="card-deck" style="max-width:90%; max-height:230px; width: auto; height: auto; margin: auto; margin-top: 10px;">
+                            
+                                <%
+                                    int i = 0;
+                                    for(Produto p : Produto.lista){
+                                        if(i % 4 == 0){
+                                            if (i != 0){ %>
+                                            
+                                                </div>
+                                                </div>
+                                            <% } %>
+                                            <div class="carousel-item active">
+                                            <div class="card-deck" style="max-width:90%; max-height:230px; width: auto; height: auto; margin: auto; margin-top: 10px;">
+                                            
+                                <% } %>
                                     <a href="produtos.jsp?prod=caneta-bic-azul" class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
                                         <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
                                         <div class="card-body">
@@ -94,36 +106,12 @@
                                             <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
                                         </div>
                                     </a>
-                                    <div class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
-                                        <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
-                                        <div class="card-body">
-                                            <h5 class="card-title font-weight" style="font-size: 15px">Caneta Bic Azul</h5>
-                                            <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
-                                        <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
-                                        <div class="card-body">
-                                            <h5 class="card-title font-weight" style="font-size: 15px">Caneta Bic Azul</h5>
-                                            <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
-                                        <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
-                                        <div class="card-body">
-                                            <h5 class="card-title font-weight" style="font-size: 15px">Caneta Bic Azul</h5>
-                                            <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
-                                        </div>
-                                    </div>
+                                    
+                                    
+                                <% } %>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="https://images.tcdn.com.br/img/img_prod/698958/borracha_faber_castell_tons_pastel_fc_max_191_1_20190625134314.jpg" class="d-block w-100" style="max-width:80%; max-height:300px; width: auto; height: auto; margin: auto;">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                        </div>
+                              
                         <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev" style="margin-left: -10px">
                             <span class="control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>

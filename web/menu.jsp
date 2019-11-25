@@ -20,6 +20,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
+<script>$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget); // Button that triggered the modal
+  var recipient = button.data('whatever'); // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this);
+  modal.find('.modal-title').text('New message to ' + recipient);
+  modal.find('.modal-body input').val(recipient);
+}); </script>
+
 <nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #1b4965">
 
     <a class="navbar-brand" href="index.jsp">
@@ -78,9 +88,10 @@
                 <a class="dropdown-toggle btn-outline-warning rounded text-decoration-none text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUTOS</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="addPessoa.jsp">Cadastrar</a>
-                    <a class="dropdown-item" href="#">Modificar</a>
-                    <a class="dropdown-item" href="#">Excluir</a>
-                    <a class="dropdown-item" href="#">Desconto</a>
+                    <a class="dropdown-item" href="busca.jsp?type=Produtos&funcion=Modificar">Modificar</a>
+                    <a class="dropdown-item" href="busca.jsp?type=Produtos&funcion=Excluir">Excluir</a>
+                    <a class="dropdown-item" type="submit" href="busca.jsp?type=Produtos&funcion=Desconto">Desconto</a>           
+                    </form>
                 </div>
             </li>
             <li class="nav-item dropdown addActive">
@@ -145,3 +156,33 @@
   </div>
 </nav>
 <% } %>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Buscar</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -40,7 +40,7 @@
                                                 <div class="col-md-4">
                                                     <div class="card mb-4 shadow-sm">
                                                         <a class="btn btn-lg btn-primary btn-block" href="produtos.jsp?prod=<%=p%>" >
-                                                        <img class="card-img-top" src="<%= p.getImagem()%>" alt="Card image cap">
+                                                        <img class="card-img-top" src="<%= p.listaImg.get(0)%>" alt="Card image cap">
                                                         </a>
                                                         <div class="card-body align-items-center">
                                                             <h1 style="text-align: center"> <%= p.getTitulo() %> <br><span style="font-size: 150%; background-color: #5fa8d3; margin-left: auto;" class="badge badge-primary align-items-center">R$<%= p.getPreco() %></span></h1>

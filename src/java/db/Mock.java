@@ -48,37 +48,37 @@ public class Mock {
             caneta.setDescricao("Caneta Esferogáfica de cor Azul fabricada pela empresa BIC. Possui ponta de espeçura 3mm e comprimento de 15cm aaaa a a a a a aaaaaa a  aaaaaa a a a aaa a aa aa aaaaaa aaaa aaa  aaaa aaa a");
             caneta.setPreco(1.50f);
             caneta.setDesconto(0.20f);
-            caneta.setImagem("http://www.bavatos.com.br/content/images/thumbs/0001016_caneta-esf-cristal-azul-bic_580.jpeg");
+            caneta.listaImg.add("http://www.bavatos.com.br/content/images/thumbs/0001016_caneta-esf-cristal-azul-bic_580.jpeg");
             lista.add(caneta);
 
             Produto caderno = new Produto();
             caderno.setTitulo("Caderno");
             caderno.setPreco(5.5f);
-            caderno.setImagem("https://cdnv2.moovin.com.br/marbig/imagens/produtos/det/caderno-espiral-capa-plastica-universitario-1-materia-neon-lilas-96-folhas-img-56136.jpg");
+            caderno.listaImg.add("https://cdnv2.moovin.com.br/marbig/imagens/produtos/det/caderno-espiral-capa-plastica-universitario-1-materia-neon-lilas-96-folhas-img-56136.jpg");
             lista.add(caderno);
 
             Produto caneca = new Produto();
             caneca.setTitulo("Caneca");
             caneca.setPreco(10.0f);
-            caneca.setImagem("https://socd.vteximg.com.br/arquivos/ids/171137-1310-1310/caneca-magica-azul-marinho-fosco.jpg?v=636404720194970000");
+            caneca.listaImg.add("https://socd.vteximg.com.br/arquivos/ids/171137-1310-1310/caneca-magica-azul-marinho-fosco.jpg?v=636404720194970000");
             lista.add(caneca);
 
             Produto lapis = new Produto();
             lapis.setTitulo("Lapis");
             lapis.setPreco(1.0f);
-            lapis.setImagem("https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg");
+            lapis.listaImg.add("https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg");
             lista.add(lapis);
 
             Produto borracha = new Produto();
             borracha.setTitulo("Borracha");
             borracha.setPreco(1.5f);
-            borracha.setImagem("https://images.tcdn.com.br/img/img_prod/698958/borracha_faber_castell_tons_pastel_fc_max_191_1_20190625134314.jpg");
+            borracha.listaImg.add("https://images.tcdn.com.br/img/img_prod/698958/borracha_faber_castell_tons_pastel_fc_max_191_1_20190625134314.jpg");
             lista.add(borracha);
 
             Produto sulfite = new Produto();
             sulfite.setTitulo("Folha Sulfite");
             sulfite.setPreco(5.0f);
-            sulfite.setImagem("https://http2.mlstatic.com/papel-sulfite-folha-a4-75-grs-pacote-c-500-unidades-D_NQ_NP_891083-MLB26996539385_032018-F.jpg");
+            sulfite.listaImg.add("https://http2.mlstatic.com/papel-sulfite-folha-a4-75-grs-pacote-c-500-unidades-D_NQ_NP_891083-MLB26996539385_032018-F.jpg");
             lista.add(sulfite);
         }
     }

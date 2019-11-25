@@ -24,6 +24,10 @@
         <servlet-name>AddDesconto</servlet-name>
         <servlet-class>AddDesconto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Busca</servlet-name>
+        <servlet-class>Busca</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Teste</servlet-name>
         <url-pattern>/Teste</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>AddDesconto</servlet-name>
         <url-pattern>/AddDesconto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Busca</servlet-name>
+        <url-pattern>/Busca</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

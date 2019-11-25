@@ -56,7 +56,7 @@ public class EditProduct extends HttpServlet {
         String imagem; 
         
         if("0".equals(request.getParameter("imagem")))
-            imagem = p.getImagem();
+            imagem = p.listaImg.get(0);
         else
             imagem = request.getParameter("imagem");
         
@@ -64,7 +64,7 @@ public class EditProduct extends HttpServlet {
         
         p.setPreco(preco);
             
-        p.setImagem(imagem);
+        p.listaImg.add(imagem);
                 
         response.sendRedirect("editProduto.jsp");
     }

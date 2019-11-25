@@ -7,11 +7,11 @@ public class Produto {
 
    private String titulo;
    private String descricao;
-   private String imagem;
    private float preco;
    private float desconto;
    private int quantidade;
-
+   private String KeyWords;
+   public ArrayList<String> listaImg = new ArrayList();
    public static ArrayList<Produto> lista = new ArrayList();
    
    public static Produto getProduto(String busca){
@@ -71,13 +71,22 @@ public class Produto {
       Produto.lista = lista;
    }
 
-   public String getImagem() {
-      return imagem;
-   }
+    public String getKeyWords() {
+        return KeyWords;
+    }
 
-   public void setImagem(String imagem) {
-      this.imagem = imagem;
-   } 
+    public void setKeyWords(String KeyWords) {
+        this.KeyWords = KeyWords;
+    }
+
+    public ArrayList<String> getListaImg() {
+        return listaImg;
+    }
+
+    public void setListaImg(ArrayList<String> listaImg) {
+        this.listaImg = listaImg;
+    }
+
 
     @Override
     public String toString() {

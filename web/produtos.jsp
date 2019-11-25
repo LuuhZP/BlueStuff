@@ -84,21 +84,26 @@
             <div>
                 <div style="height: 250px; background-color: #5fa8d3">
                     <div id="carousel2" class="carousel slide" data-ride="carousel" style="height: 230px; margin-top: 10px">
-                        <div class="carousel-inner" >                            
-                            
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel2" data-slide-to="1"></li>
+                            <li data-target="#carousel2" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" >
+                            <div class="carousel-item active">
+                                <div class="card-deck" style="max-width:90%; max-height:230px; width: auto; height: auto; margin: auto; margin-top: 10px;">
                                 <%
-                                    int i = 0;
-                                    for(Produto p : Produto.lista){
-                                        if(i % 4 == 0){
-                                            if (i != 0){ %>
-                                            
-                                                </div>
-                                                </div>
-                                            <% } %>
-                                            <div class="carousel-item active">
+                                    //int i = 0;
+                                    for(int i = 1; i < 20; i++){
+                                        Produto p = Produto.lista.get(i - 1);
+                                        if(i % 6 == 0){%>
+                                            </div>
+                                            </div>
+                                            <div class="carousel-item">
                                             <div class="card-deck" style="max-width:90%; max-height:230px; width: auto; height: auto; margin: auto; margin-top: 10px;">
                                             
-                                <% } %>
+                                <% }else{ %>
+                                <%--
                                     <a href="produtos.jsp?prod=caneta-bic-azul" class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
                                         <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
                                         <div class="card-body">
@@ -106,11 +111,20 @@
                                             <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
                                         </div>
                                     </a>
+--%>
+                                    <div class="card mb-4 shadow-sm" style="max-width:90%; height:230px; width: auto;">
+                                                        <a class="btn btn-lg btn-primary btn-block" href="produtos.jsp?prod=<%=p%>" >
+                                                        <img class="card-img-top" src="<%= p.listaImg.get(0)%>" alt="Card image cap" style="max-width:90%; max-height:150px; width: auto; height: auto;">
+                                                        </a>
+                                                        <div class="card-body align-items-center">
+                                                            <h1 style="text-align: center; margin-top: -10px; font-size: 25px;"> <%= p.getTitulo() %> <br><span style="font-size: 15px; background-color: #5fa8d3; margin-left: auto;" class="badge badge-primary align-items-center">R$<%= p.getPreco() %></span></h1>
+                                                        </div>
+                                                    </div>
                                     
-                                    
-                                <% } %>
+                                <% } } %>
                                 </div>
                             </div>
+                        </div>
                               
                         <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev" style="margin-left: -10px">
                             <span class="control-prev-icon" aria-hidden="true"></span>
@@ -125,7 +139,7 @@
             </div>
         </div>
         
-                            
+                            --%>
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

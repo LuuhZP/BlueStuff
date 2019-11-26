@@ -62,7 +62,7 @@
                     </div>    
                 </div>
                                         
-<%--       COLUNA LATERAL      --%>
+<%--       COLUNA LATERAL    --%>  
                 <div class="col-md">
                     <div class="text-light text-center px-4 py-4 text-uppercase font-weight-bold" style="height: 45px;  margin: auto; background-color: #1b4965; font-size: 120%"><%= produto.getTitulo() %></div>
                     <div class="p-3">
@@ -103,18 +103,10 @@
                                             <div class="card-deck" style="max-width:90%; max-height:230px; width: auto; height: auto; margin: auto; margin-top: 10px;">
                                             
                                 <% }else{ %>
-                                <%--
-                                    <a href="produtos.jsp?prod=caneta-bic-azul" class="card" style="max-width:90%; max-height:230px; width: auto; height: auto;">
-                                        <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="card-img-top" alt="..." style="max-width:90%; max-height:150px; width: auto; height: auto;">
-                                        <div class="card-body">
-                                            <h5 class="card-title font-weight" style="font-size: 15px">Caneta Bic Azul</h5>
-                                            <p class="font-weight-bold text-center" style="font-size: 20px">R$ 5,00</p>
-                                        </div>
-                                    </a>
---%>
+                                
                                     <div class="card mb-4 shadow-sm" style="max-width:90%; height:230px; width: auto;">
-                                                        <a class="btn btn-lg btn-primary btn-block" href="produtos.jsp?prod=<%=p%>" >
-                                                        <img class="card-img-top" src="<%= p.listaImg.get(0)%>" alt="Card image cap" style="max-width:90%; max-height:150px; width: auto; height: auto;">
+                                                        <a class="btn btn-lg btn-primary btn-block" href="produtos.jsp?prod=<%=p%>" style="height:150px;">
+                                                        <img class="card-img-top align-middle" src="<%= p.listaImg.get(0)%>" alt="Card image cap" style=" margin: auto; display: inline-block; max-width:90%; max-height:130px; width: auto; height: auto;">
                                                         </a>
                                                         <div class="card-body align-items-center">
                                                             <h1 style="text-align: center; margin-top: -10px; font-size: 25px;"> <%= p.getTitulo() %> <br><span style="font-size: 15px; background-color: #5fa8d3; margin-left: auto;" class="badge badge-primary align-items-center">R$<%= p.getPreco() %></span></h1>
@@ -136,14 +128,13 @@
                         </a>
                     </div>    
                 </div>
-            </div>
+            </div> 
         </div>
+        <% }%>
         
-                            --%>
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <% }%>
     </body>
 </html>

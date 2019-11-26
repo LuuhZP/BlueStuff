@@ -7,6 +7,7 @@ public class Produto {
 
    private String titulo;
    private String descricao;
+   private String categoria;
    private float preco;
    private float desconto;
    private int quantidade;
@@ -87,11 +88,16 @@ public class Produto {
         this.listaImg = listaImg;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
 
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+   
     @Override
     public String toString() {
         return titulo.replaceAll(" ", "-");
     }  
-   
-   
 }

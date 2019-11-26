@@ -76,7 +76,7 @@
                             <td>
 
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="<%=p.getImagem()%>" name="imagem" form="edit" >
+                                    <input type="text" class="form-control" placeholder="<%=p.listaImg.get(0)%>" name="imagem" form="edit" >
                                 </div>
 
                             </td>

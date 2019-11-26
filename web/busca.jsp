@@ -4,6 +4,7 @@
     Author     : cfeva
 --%>
 
+<%@page import="modelos.Produto"%>
 <%@page import="modelos.Pessoa"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,31 +13,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         
-        <script language="javascrip">
-            $(function(){
-	//Pesquisar os cursos sem refresh na página
-	$("#pesquisa").keyup(function(){
-		
-		var pesquisa = $(this).val();
-		
-		//Verificar se há algo digitado
-		if(pesquisa != ''){
-			var dados = {
-				palavra : pesquisa
-			}		
-			$.post('Busca', dados, function(retorna){
-				//Mostra dentro da ul os resultado obtidos 
-				$(".resultado").html(retorna);
-			});
-		}else{
-			$(".resultado").html('');
-		}		
-	});
-});
-        </script>
+        
         
     </head>
-    <body style=" background-color: #cae9ff">
+    <body >
         
         <jsp:include page="menu.jsp">
             <jsp:param name="navInferior" value="0" />
@@ -44,7 +24,6 @@
         
         <%          
             String type = request.getParameter("type");
-            String funcion = request.getParameter("funcion");
             
             boolean logado = false;
             
@@ -58,27 +37,101 @@
                 pessoa = (Pessoa)session.getAttribute("pessoa");
             }
             
-            if(type == null || funcion == null || !logado || !pessoa.isAdmin())
+            if(type == null || !logado || !pessoa.isAdmin())
               response.sendRedirect("index.jsp");
             else{
             %>
-        <h1>Hello World!</h1>
-        
-    <div class="container" style="width: 33%; display: block; margin-left: 33%">
-         
-         <h1>Pesquisar Cursos</h1>
-		<form method="POST" id="form-pesquisa" action="">
-			Pesquisar: <input type="text" name="pesquisa" id="pesquisa" placeholder="O que você está procurando?">
-			<input type="submit" name="enviar" value="Pesquisar">
-		</form>
-		
-		<ul class="resultado">
-		
-		</ul>
-      </div>
+        <div class="text-center">
+            <h1>Buscar por <%= type.toUpperCase() %></h1>
+            <div style="font-size: 25px; height: 30px; padding: 3%" >
+                <label>Busca: </label>
+                <input class="border-bottom" id="filtro-nome" style="width: 80%"/>
+            </div>
+        </div>
+        <div style="padding: 20px">
+            <table class="mt-3 table table-sm" id="lista">
+                <thead>
+                    <tr>
+                        <% if(type.equals("Produtos")){ %>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Desconto</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Imagem</th>
+                        <th scope="col">editar</th>
+                        <% }else if(type.equals("Pessoas")){ %>
+                        <th scope="col">Nome</th>
+                        <th scope="col">RG</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Email</th>
+                        <% } %>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if(type.equals("Produtos")) {
+                    for (int i = 0; i < Produto.lista.size(); i++) {
+
+                        Produto p = Produto.lista.get(i);
+                        %>
+                        <tr style="width: 15%; font-size: 20px;">
+                            <td><%= p.getTitulo() %></td>
+                            <td><%= p.getCategoria() %></td>
+                            <td>R$<%= p.getPreco() %></td>
+                            <td><span <%if(p.getDesconto() > 0){%> style="font-size: 25px; background-color: #5fa8d3; margin-left: auto;" class="badge badge-primary align-items-center" <% }%> > R$ <%= p.getDesconto() %></span> <br/><a class="btn" style="background-color: #1b4965; color: white; margin-top: 5%;">Alterar</a> <br/></td>
+                            <td><%= p.getQuantidade() %> <br/><a class="btn" style="background-color: #1b4965; color: white; margin-top: 5%;">Adicionar</a> <br/></td> </td>
+                            <td>
+                                <img src="<%= p.listaImg.get(0)%>" style=" max-width:80px; max-height:80px; width: auto; height: auto;">
+                            </td>
+                            <td>
+                                <div class="mx-auto" style="width: 55px; display: block">
+                                    <a class="btn" style="background-color: #1b4965; color: white; margin-top: 7%;">Modificar</a> <br/>
+                                    <a class="btn" style="background-color: #1b4965; color: white; margin-top: 7%;">Excluir</a> <br/>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        <% } %>
+                        <% }else if(type.equals("Pessoas")) {
+                    for (int i = 0; i < Pessoa.lista.size(); i++) {
+
+                        Pessoa p = Pessoa.lista.get(i);
+                        %>
+                        <tr style="width: 15%; font-size: 20px;">
+                            <td><%= p.getNome() %></td>
+                            <td><%= p.getRg() %></td>
+                            <td><%= p.getCpf() %></td>
+                            <td><%= p.getTelefone() %></td>
+                            <td><%= p.getLogin() %></td>
+                            <td>
+                                <div class="mx-auto" style="width: 55px; display: block">
+                                    <a class="btn" style="background-color: #1b4965; color: white; margin-top: 7%;">Modificar</a> <br/>
+                                    <a class="btn" style="background-color: #1b4965; color: white; margin-top: 7%;">Excluir</a> <br/>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        <% }} %>
+                </tbody>
+            </table>
+        </div>
         <% }%>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script>
+            $('#filtro-nome').keyup(function() {
+    var nomeFiltro = $(this).val().toLowerCase();
+    $('table tbody').find('tr').each(function() {
+        var conteudoCelula = $(this).find('td:first').text();
+        var corresponde = conteudoCelula.toLowerCase().indexOf(nomeFiltro) >= 0;
+        $(this).css('display', corresponde ? '' : 'none');
+    });
+});
+        </script>
+        
    </body>
 </html>

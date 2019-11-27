@@ -72,6 +72,10 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965; ">Imagem:</span>
                         </div>
+                        <div class="input-group-prepend">    
+                            <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: red; font-size: 20px;">Separar as imagens usando " , "</span>
+                        </div>
+                        
                         <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="imagem">
                     </div>
 

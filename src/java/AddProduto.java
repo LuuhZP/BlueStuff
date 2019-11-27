@@ -5,7 +5,6 @@
  */
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,13 +28,16 @@ public class AddProduto extends HttpServlet {
                 request.getParameter("preco")
         );
         
+        String imagem = request.getParameter("imagem");
+        
         Produto p = new Produto();
         p.setDescricao(descricao);
         p.setPreco(preco);
+        p.listaImg.add(imagem);
         
-        Produto.lista.add(p);
+        Produto.lista.add(p);   
         
-        response.sendRedirect("produtos.jsp");
+        response.sendRedirect("index.jsp");
         
     }
     

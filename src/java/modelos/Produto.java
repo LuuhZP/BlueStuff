@@ -11,7 +11,7 @@ public class Produto {
    private float preco;
    private float desconto;
    private int quantidade;
-   private String KeyWords;
+   private String keyWords;
    public ArrayList<String> listaImg = new ArrayList();
    public static ArrayList<Produto> lista = new ArrayList();
    
@@ -23,6 +23,18 @@ public class Produto {
        }
        return null;
    }
+   
+    public static void deletar(String busca){
+        Produto prod = Produto.getProduto(busca);
+        Produto.lista.remove(prod);
+    }
+    
+    public String getImagens(){
+        String img = "";
+        for(String s : listaImg)
+            img += ", " + s;
+        return img;
+    }
 
    public String getTitulo() {
       return titulo;
@@ -55,6 +67,11 @@ public class Produto {
    public void setDesconto(float desconto) {
       this.desconto = desconto;
    }
+   
+   public static void setDesconto(String busca, float desconto){
+       Produto prod = Produto.getProduto(busca);
+       prod.setDesconto(desconto);
+   }
 
    public int getQuantidade() {
       return quantidade;
@@ -73,11 +90,11 @@ public class Produto {
    }
 
     public String getKeyWords() {
-        return KeyWords;
+        return keyWords;
     }
 
     public void setKeyWords(String KeyWords) {
-        this.KeyWords = KeyWords;
+        this.keyWords = KeyWords;
     }
 
     public ArrayList<String> getListaImg() {

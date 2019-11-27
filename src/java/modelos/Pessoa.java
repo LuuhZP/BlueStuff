@@ -27,6 +27,21 @@ public class Pessoa {
       }
       return null;
    }
+   
+   public static Pessoa getPessoa(String busca){
+       String nome = busca.replaceAll("-", " ");
+       for(Pessoa p : Pessoa.lista){
+           if(p.getNome().equals(nome))
+               return p;
+       }
+       return null;
+       
+   }
+   
+   public static void deletar(String busca){
+        Pessoa pes = Pessoa.getPessoa(busca);
+        Pessoa.lista.remove(pes);
+    }
 
    public String getNome() {
       return nome;
@@ -123,5 +138,10 @@ public class Pessoa {
    public void setAdmin(boolean admin) {
       this.admin = admin;
    }
+   
+   @Override
+    public String toString() {
+        return nome.replaceAll(" ", "-");
+    }
 
 }

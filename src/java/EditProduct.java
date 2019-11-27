@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelos.Pessoa;
 import modelos.Produto;
 
 /**
@@ -24,16 +25,36 @@ public class EditProduct extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Produto l = Produto.lista.remove(Integer.parseInt(request.getParameter("buttondel")));
-        
-        response.sendRedirect("editProduto.jsp");
-        
     }
         
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        String function = request.getParameter("function");
+        String type = request.getParameter("type");
+        String object = request.getParameter("obj");
+        
+        if(type.equals("Produtos")){
+            if(function.equals("del"))
+                Produto.deletar(object);
+            else if (function.equals("desconto")){
+                float desconto = Float.parseFloat(request.getParameter("desconto"));
+                Produto.setDesconto(object, desconto);
+            }
+        }
+        else if(type.equals("Pessoas")){
+            if(function.equals("del"))
+                Pessoa.deletar(object);
+            else if (function.equals("desconto")){
+                float desconto = Float.parseFloat(request.getParameter("desconto"));
+                //Pessoa.setDesconto(object, desconto);
+            }
+        }
+        
+            response.sendRedirect("busca.jsp?type="+type);
+        /*
+        else{
         
         PrintWriter out = response.getWriter();
 
@@ -67,6 +88,7 @@ public class EditProduct extends HttpServlet {
         p.listaImg.add(imagem);
                 
         response.sendRedirect("editProduto.jsp");
+        }*/
     }
 
 }

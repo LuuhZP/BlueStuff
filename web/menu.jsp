@@ -65,7 +65,7 @@
     <% } else{ %>
     
     <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
-        <a href="login.jsp" class="btn btn-success rounded alert-link text-decoration-none" >ESTOQUE</a>
+        <a href="comprar.jsp" class="btn btn-success rounded alert-link text-decoration-none" >Comprar</a>
     </span>
     
     <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
@@ -80,7 +80,6 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="addPessoa.jsp">Cadastrar</a>
                     <a class="dropdown-item" href="busca.jsp?type=Pessoas">Modificar</a>
-                    <a class="dropdown-item" href="busca.jsp?type=Pessoas">Excluir</a>
                 </div>
             </li>
             <li class="nav-item dropdown addActive">
@@ -88,9 +87,7 @@
                 <a class="dropdown-toggle btn-outline-warning rounded text-decoration-none text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUTOS</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="addProduto.jsp">Cadastrar</a>
-                    <a class="dropdown-item" href="busca.jsp?type=Produtos">Modificar</a>
-                    <a class="dropdown-item" href="busca.jsp?type=Produtos">Excluir</a>
-                    <a class="dropdown-item" type="submit" href="busca.jsp?type=Produtos&funcion=Desconto">Desconto</a>           
+                    <a class="dropdown-item" href="busca.jsp?type=Produtos">Modificar</a>           
                     </form>
                 </div>
             </li>

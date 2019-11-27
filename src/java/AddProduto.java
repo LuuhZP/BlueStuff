@@ -22,17 +22,36 @@ public class AddProduto extends HttpServlet {
                         HttpServletResponse response
             )throws ServletException, IOException{
         
-        String descricao = request.getParameter("descricao");
+        String titulo = request.getParameter("titulo");
+        
+        String categoria = request.getParameter("categoria");
         
         float preco = Float.parseFloat(
                 request.getParameter("preco")
         );
         
-        String imagem = request.getParameter("imagem");
+        float desconto = Float.parseFloat(
+                request.getParameter("desconto")
+        );
+        
+        int quantidade = Integer.parseInt(
+                request.getParameter("quantidade")
+        );
+        
+        String descricao = request.getParameter("descricao");
+        
+        String keywords = request.getParameter("keywords");
+        
+        String imagem = request.getParameter("imagens");
         
         Produto p = new Produto();
-        p.setDescricao(descricao);
+        p.setTitulo(titulo);
+        p.setCategoria(categoria);
         p.setPreco(preco);
+        p.setDesconto(desconto);
+        p.setQuantidade(quantidade);
+        p.setDescricao(descricao);
+        p.setKeyWords(keywords);
         p.listaImg.add(imagem);
         
         Produto.lista.add(p);   

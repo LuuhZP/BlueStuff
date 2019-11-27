@@ -65,7 +65,7 @@
     <% } else{ %>
     
     <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
-        <a href="login.jsp" class="btn btn-success rounded alert-link text-decoration-none" >ESTOQUE</a>
+        <a href="comprar.jsp" class="btn btn-success rounded alert-link text-decoration-none" >Comprar</a>
     </span>
     
     <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
@@ -79,18 +79,15 @@
                 <a class=" dropdown-toggle btn-outline-warning rounded text-decoration-none text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PESSOAS</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="addPessoa.jsp">Cadastrar</a>
-                    <a class="dropdown-item" href="#">Modificar</a>
-                    <a class="dropdown-item" href="#">Excluir</a>
+                    <a class="dropdown-item" href="busca.jsp?type=Pessoas">Modificar</a>
                 </div>
             </li>
             <li class="nav-item dropdown addActive">
                 <img src="images/icones/icons8-editar-64.png" width="30px"/>
                 <a class="dropdown-toggle btn-outline-warning rounded text-decoration-none text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUTOS</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="addPessoa.jsp">Cadastrar</a>
-                    <a class="dropdown-item" href="busca.jsp?type=Produtos&funcion=Modificar">Modificar</a>
-                    <a class="dropdown-item" href="busca.jsp?type=Produtos&funcion=Excluir">Excluir</a>
-                    <a class="dropdown-item" type="submit" href="busca.jsp?type=Produtos&funcion=Desconto">Desconto</a>           
+                    <a class="dropdown-item" href="addProduto.jsp">Cadastrar</a>
+                    <a class="dropdown-item" href="busca.jsp?type=Produtos">Modificar</a>           
                     </form>
                 </div>
             </li>
@@ -98,61 +95,26 @@
                 <img src="images/icones/icons8-excluir-64.png" width="30px" />
                 <a class="dropdown-toggle btn-outline-warning rounded text-decoration-none text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CUPONS</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="addProduto.jsp">Adicionar</a>
+                    <a class="dropdown-item" href="#">Adicionar</a>
                     <a class="dropdown-item" href="#">Remover</a>
                 </div>
             </li>
         </ul>
     </div>
-    <% } %>
-        
-           
-      
+    <% } %>        
 </nav>
+    
 <% if(navInferior){ %>
-<nav class="navbar navbar-expand-lg navbar-light" style=" margin-top: -20px; background-color: #5fa8d3">
-
-    <a class="navbar-brand" href="index.jsp">
-       <img src="image/logo.png" alt="" width="100px" style="display: block; margin-top: -10px; "/>
-    </a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.jsp">Ofertas <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="produtos.jsp">Produtos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="sobre.jsp">Sobre</a>
-      </li>
-      <li class="nav-item dropdown addActive">
-           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Cadastrar
-           </a>
-           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <a class="dropdown-item" href="addProduto.jsp">Produtos</a>
-             <a class="dropdown-item" href="#">Funcionarios</a>
-           </div>
-         </li>
-         <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Gerenciar
-           </a>
-           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <a class="dropdown-item" href="#">Produtos</a>
-             <a class="dropdown-item" href="#">Clientes</a>
-           </div>
-         </li>
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark" style=" margin-top: -20px; background-color: #5fa8d3">
+    
+    <div class="collapse navbar-collapse">
+        <div class="row">
+            <div class="col" style="text-align: center;"><a class="text-decoration-none text-white" href="index.jsp?busca=eletronico">Eletronicos</a></div>
+            <div class="col" style="text-align: center;"><a class="text-decoration-none text-white" href="index.jsp?busca=celulares-computadores">Celulares & Computadores</a></div>
+            <div class="col" style="text-align: center;"><a class="text-decoration-none text-white" href="index.jsp?busca=roupas">Roupas</a></div>
+            <div class="col" style="text-align: center;"><a class="text-decoration-none text-white" href="index.jsp?busca=casa-mobilha">Casa & Mobilha</a></div>
+            <div class="col" style="text-align: center;"><a class="text-decoration-none text-white" href="index.jsp?busca=outros">Outros</a></div>
+        </div>
   </div>
 </nav>
 <% } %>

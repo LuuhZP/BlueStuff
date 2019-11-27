@@ -77,7 +77,11 @@
                             <td>
 
                                 <div class="input-group">
+<<<<<<< HEAD
                                     <input type="text" class="form-control" placeholder="<%=p.getListaImg()%>" name="imagem" form="edit" >
+=======
+                                    <input type="text" class="form-control" placeholder="<%=p.listaImg.get(0)%>" name="imagem" form="edit" >
+>>>>>>> 21762db2d2d23cae454fa5068c8b1fc504e9765d
                                 </div>
 
                             </td>

@@ -58,7 +58,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text text-white " id="inputGroup-sizing-default" style="background-color: #1b4965; ">Titulo*</span>
                                 </div>
-                                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="descricao" <% if(alterar){%> value="<%= p.getTitulo()%>" <% }%>placeholder="Titulo do Produto" required>
+                                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="titulo" <% if(alterar){%> value="<%= p.getTitulo()%>" <% }%>placeholder="Titulo do Produto" required>
                                  
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text text-white" style="background-color: #1b4965; ">Categoria*</span>
                                 </div>
-                                <select class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="sexo" <% if(alterar){%> value="<%= p.getCategoria()%>" <% }%> required>
+                                <select class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="categoria" <% if(alterar){%> value="<%= p.getCategoria()%>" <% }%> required>
                                     <option selected> </option>
                                     <option value="Eletronicos">Eletronicos</option>
                                     <option value="Celulares & Computadores">Celulares & Computadores</option>
@@ -92,7 +92,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text text-white" style="background-color: #1b4965; ">Desconto</span>
                                 </div>
-                                <input class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="preco" <% if(alterar){%> value="<%= p.getDesconto()%>" <% }%> value="0.00">
+                                <input class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="desconto" <% if(alterar){%> value="<%= p.getDesconto()%>" <% }%> value="0.00">
                             </div>
                         </div>
                         <div class="col-3">
@@ -100,7 +100,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text text-white" style="background-color: #1b4965; ">Quantidade</span>
                                 </div>
-                                <input type="int" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="preco" <% if(alterar){%> value="<%= p.getQuantidade()%>" <% }%> value="0">
+                                <input type="int" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="quantidade" <% if(alterar){%> value="<%= p.getQuantidade()%>" <% }%> value="0">
                             </div>
                         </div>
                      </div>
@@ -114,13 +114,15 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965; ">KeyWords*</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="imagem" <% if(alterar){%> value="<%= p.getKeyWords()%>" <% }%> placeholder="Palavras chaves separada por  ', '" required>
+                        
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="keywords" <% if(alterar){%> value="<%= p.getKeyWords()%>" <% }%> placeholder="Palavras chaves separada por  ', '" required>
+
                     </div>
                     <div class="input-group-lg mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965; ">Imagens*</span>
                         </div>
-                        <textarea type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="descricao" <% if(alterar){%> value="<%= p.getImagens()%>" <% }%> style="min-height: 100px" placeholder="URL da imagens separada por  ', '" required></textarea>
+                        <textarea type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="imagens" <% if(alterar){%> value="<%= p.getImagens()%>" <% }%> style="min-height: 100px" placeholder="URL da imagens separada por  ', '" required></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-lg" style="background-color: #1b4965; color: white;">Adicionar Produto</button>

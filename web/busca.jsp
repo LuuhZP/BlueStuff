@@ -125,7 +125,7 @@
                             <td><%= p.getLogin() %></td>
                             <td>
                                 <div class="mx-auto" style="width: 55px; display: block">
-                                    <button type="submit" form="edit" name="botaoEdit" value="<%= p%>" class="btn" style="background-color: #1b4965; color: white; margin-top: 7%;">Modificar</button> <br/>
+                                    <a href="addPessoa.jsp?pes=<%=p%>" class="btn" style="background-color: #1b4965; color: white; margin-top: 7%;">Modificar</a> <br/>
                                     <form class="form" action="EditProduct" method="post">
                                         <input name="function" value="del" style="display: none">
                                         <input name="type" value="Pessoas" style="display: none">

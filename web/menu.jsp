@@ -3,6 +3,7 @@
     Created on : 18/09/2019, 16:14:22
     Author     : Desenvolvimento
 --%>
+<%@page import="modelos.Pessoa"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="db.Mock"%>
 <%
@@ -43,22 +44,41 @@
     
     <%
             boolean logado = false;
+            
             if(session != null && session.getAttribute("logado") != null){
-                logado = (boolean) session.getAttribute("logado");
+                logado = (boolean)session.getAttribute("logado");
+            }
+            
+            Pessoa pessoa = new Pessoa();
+            
+            if(session != null && session.getAttribute("pessoa") != null){
+                pessoa = (Pessoa)session.getAttribute("pessoa");
             }
 
-            if(!logado){
+            if(!logado || !pessoa.isAdmin()){
+                if(!logado){
+                
         %>
        
     <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
       <p class="text-left">FAÇA O <a href="login.jsp" class="btn-outline-success rounded alert-link text-decoration-none" >LOGIN</a> OU <a href="addPessoa.jsp"class="btn-outline-danger rounded alert-link text-decoration-none" >CADASTRE-SE</a></p>
     </span>
+        <% } else{ %>
+            <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
+      <p class="text-left">SEJA BEM VINDO <%= pessoa.getNome().toUpperCase() %></p>
+    </span>
+        
+            <span class="navbar-text d-flex flex-row bd-highlight mx-auto" style=" display: block; width: 150px;">
+        <a href="login.jsp" class="btn btn-danger rounded alert-link text-decoration-none" >SAIR</a>
+    </span>        
+        
+        <% }%>
 
     <div class="d-flex flex-row-reverse ">
         <ul class="list-unstyled">
-            <li><img src="images/icones/icons8-usuário-masculino-64.png" width="30px"/><a href="#" class="btn-outline-warning rounded text-decoration-none text-white" >  MEU CADASTRO</a></li>
-            <li><img src="images/icones/icons8-carrinho-de-compras-64.png" width="30px"/><a href="carrinho.jsp" class="btn-outline-warning rounded text-decoration-none text-white" >  MEU CARRINHO</a></li>
-            <li><img src="images/icones/icons8-produto-64.png" width="30px"/><a href="#" class="btn-outline-warning rounded text-decoration-none text-white" >  MEUS PEDIDOS</a></li>
+            <li><img src="images/icones/icons8-usuário-masculino-64.png" width="30px"/><a href="<% if(logado){%>addPessoa.jsp?pes=<%= pessoa%><% }else{ %>login.jsp <% }%>" class="btn-outline-warning rounded text-decoration-none text-white" >  MEU CADASTRO</a></li>
+            <li><img src="images/icones/icons8-carrinho-de-compras-64.png" width="30px"/><a href="<% if(logado){%>carrinho.jsp<% }else{ %>login.jsp <% }%>" class="btn-outline-warning rounded text-decoration-none text-white" >  MEU CARRINHO</a></li>
+            <li><img src="images/icones/icons8-produto-64.png" width="30px"/><a href="<% if(logado){%>carrinho.jsp<% }else{ %>login.jsp <% }%>" class="btn-outline-warning rounded text-decoration-none text-white" >  MEUS PEDIDOS</a></li>
 
         </ul>
     </div>

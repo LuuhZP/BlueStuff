@@ -32,6 +32,13 @@ public class Mock {
             gerente.setNome("Fulano de Tal");
             gerente.setAdmin(true);
             lista.add(gerente);
+            
+            Pessoa aluno = new Pessoa();
+            gerente.setLogin("aluno@ifpr.edu.br");
+            gerente.setSenha("admin");
+            gerente.setNome("Ciclano de Tal");
+            gerente.setAdmin(false);
+            lista.add(aluno);
         }
 
     }

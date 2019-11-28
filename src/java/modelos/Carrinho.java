@@ -12,8 +12,16 @@ public class Carrinho {
     private BigDecimal valorTotal;
     private BigDecimal desconto;
 
-    private ArrayList<ItemCarrinho> itens = new ArrayList();
-
+    public static ArrayList<ItemCarrinho> itens = new ArrayList();
+    
+    public static ItemCarrinho getItem(String busca){
+       for(ItemCarrinho item : Carrinho.itens){
+           if(item.getProduto().getTitulo().equals(busca))
+               return item;
+       }
+       return null;
+    }
+    
     public Pessoa getCliente() {
         return pessoa;
     }
@@ -61,5 +69,6 @@ public class Carrinho {
     public void setItens(ArrayList<ItemCarrinho> itens) {
         this.itens = itens;
     }
-
+    
+    
 }

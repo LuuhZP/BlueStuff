@@ -1,12 +1,10 @@
 package modelos;
 
-import java.math.BigDecimal;
-
 public class ItemCarrinho {
     private Produto produto;
     private int quantidade;
-    private BigDecimal preco;
-
+    private float preco;
+    
     public Produto getProduto() {
         return produto;
     }
@@ -23,13 +21,15 @@ public class ItemCarrinho {
         this.quantidade = quantidade;
     }
 
-    public BigDecimal getPreco() {
+    public float getPreco() {
         return preco;
     }
 
-    public void setPreco(BigDecimal preco) {
+    public void setPreco(float preco) {
         this.preco = preco;
     }
     
-    
+    public String toString() {
+        return produto.getTitulo().replaceAll(" ", "-");
+    } 
 }

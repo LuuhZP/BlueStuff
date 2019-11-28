@@ -28,6 +28,14 @@
         <servlet-name>Busca</servlet-name>
         <servlet-class>Busca</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddCarrinho</servlet-name>
+        <servlet-class>AddCarrinho</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditCarrinho</servlet-name>
+        <servlet-class>EditCarrinho</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Teste</servlet-name>
         <url-pattern>/Teste</url-pattern>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>Busca</servlet-name>
         <url-pattern>/Busca</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddCarrinho</servlet-name>
+        <url-pattern>/AddCarrinho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditCarrinho</servlet-name>
+        <url-pattern>/EditCarrinho</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

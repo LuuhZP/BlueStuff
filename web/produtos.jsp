@@ -30,6 +30,8 @@
             <jsp:param name="navInferior" value="1" />
         </jsp:include>
         
+        <form id="add" class="form" action="AddCarrinho" method="post"></form>
+        
         <div class="container-fluid">
             <div class="row">
                 <!-- Shopping cart table -->
@@ -76,11 +78,12 @@
                                 <h2 class="font-weight text-center" style="font-size: 65px">R$<%= (produto.getPreco() - produto.getDesconto()) %></h2>
                             </li>
                         </ul>
-                        <a href="pagamento.jsp" class="btn btn-lg btn-block" style="background-color: #1b4965; color: white">Adicionar ao Carrinho</a>
+                            <button form="add" type="submit" name="prod" value="<%=produto%>"class="btn btn-lg btn-block" style="background-color: #1b4965; color: white">Adicionar ao Carrinho</button>
                     </div>
                 </div>
             </div>
-            <%-- Sujestoes --%>
+            <%-- Sujestoes 
+            
             <div>
                 <div style="height: 250px; background-color: #5fa8d3">
                     <div id="carousel2" class="carousel slide" data-ride="carousel" style="height: 230px; margin-top: 10px">
@@ -130,8 +133,8 @@
                 </div>
             </div> 
         </div>
+        --%>
         <% }%>
-        
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

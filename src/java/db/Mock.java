@@ -87,6 +87,43 @@ public class Mock {
             sulfite.setPreco(5.0f);
             sulfite.listaImg.add("https://http2.mlstatic.com/papel-sulfite-folha-a4-75-grs-pacote-c-500-unidades-D_NQ_NP_891083-MLB26996539385_032018-F.jpg");
             lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(sulfite);
+            lista.add(caneta);
+            lista.add(caneta);
+            lista.add(caneta);
+            lista.add(caneta);
+            lista.add(caneta);
+            lista.add(caneta);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+            lista.add(lapis);
+
+
+
         }
     }
 

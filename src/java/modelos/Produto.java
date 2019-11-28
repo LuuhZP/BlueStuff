@@ -2,6 +2,7 @@ package modelos;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Produto {
 
@@ -15,6 +16,7 @@ public class Produto {
    public ArrayList<String> listaImg = new ArrayList();
    public static ArrayList<Produto> lista = new ArrayList();
    
+
    public static Produto getProduto(String busca){
        String buscar = busca.replaceAll("-", " ");
        for(Produto p : Produto.lista){
@@ -101,8 +103,8 @@ public class Produto {
         return listaImg;
     }
 
-    public void setListaImg(ArrayList<String> listaImg) {
-        this.listaImg = listaImg;
+    public void setListaImg(String listaImg) {
+        this.listaImg = new ArrayList<>(Arrays.asList(listaImg.split(" , ")));
     }
 
     public String getCategoria() {
@@ -113,7 +115,6 @@ public class Produto {
         this.categoria = categoria;
     }
    
-    @Override
     public String toString() {
         return titulo.replaceAll(" ", "-");
     }  

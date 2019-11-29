@@ -8,7 +8,7 @@
 <%@page import="db.Mock"%>
 <%
    Mock.makeMock();
-
+   
    boolean navInferior = request.getParameter("navInferior").equals("1") ? true : false;
 
 %>

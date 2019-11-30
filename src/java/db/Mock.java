@@ -171,7 +171,7 @@ public class Mock {
             lista.add(babyvestido);
 
             Produto babymm = new Produto();
-            babymm.setTitulo("Roupas para Bebês M&M");
+            babymm.setTitulo("Roupas para Bebês M e M");
             babymm.setDescricao("Roupas para bebês especial M&M azul marinho");
             babymm.setPreco(40.5f);
             babymm.setDesconto(6f);
@@ -188,7 +188,7 @@ public class Mock {
             camifrancesa.setPreco(84.5f);
             camifrancesa.setDesconto(0f);
             camifrancesa.listaImg.add("https://images-na.ssl-images-amazon.com/images/I/51D8vCzrE5L._UL1042_.jpg");
-            camifrancesa.listaImg.add("https://images.footballfanatics.com/FFImage/thumb.aspx?i=/productimages/_3056000/altimages/ff_3056831alt3_full.jpg&w=600");
+            camifrancesa.listaImg.add("https://images.footballfanatics.com/FFImage/thumb.aspx?i=/productimages/_3056000/altimages/ff_3056831alt3_full.jpg");
             camifrancesa.setQuantidade(3045564);
             camifrancesa.setKeyWords("camisa francesa importado");
             camifrancesa.setCategoria("roupas");

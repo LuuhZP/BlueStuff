@@ -39,19 +39,19 @@
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 350px; margin-top: 5%">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <% for(int j = 1; j <= produto.listaImg.size() - 1; j++){ %>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="<%= j%>"></li>
+                            <% }%>
                         </ol>
                         <div class="carousel-inner" >
                             <div class="carousel-item active">
-                                <img src="https://cdn.awsli.com.br/600x450/268/268329/produto/19914289/bcb456e23e.jpg" class="d-block w-100" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto">
+                                <img src="<%= produto.listaImg.get(0) %>" class="d-block w-100" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto">
                             </div>
-                            <div class="carousel-item" style="">
-                                <img src="https://images.tcdn.com.br/img/img_prod/698958/borracha_faber_castell_tons_pastel_fc_max_191_1_20190625134314.jpg" class="d-block w-100" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto;">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
+                            <% for(int i = 1; i <= produto.listaImg.size() - 1; i++){ %>
+                                <div class="carousel-item" style="">
+                                    <img src="<%= produto.listaImg.get(i) %>" class="d-block w-100" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto;">
+                                </div>
+                            <% }%>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="margin-left: -6%">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

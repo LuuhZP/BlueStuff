@@ -22,37 +22,64 @@ public class AddPessoa extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        Pessoa p = new Pessoa();
+        
+        if(request.getParameter("dataNas") != null){
+            String dataNas = request.getParameter("dataNas");
+            p.setDataNas(dataNas);
+        }
+        if(request.getParameter("RG") != null){
+            String rg = request.getParameter("RG");
+            p.setRg(rg);
+        }
+        if(request.getParameter("sexo") != null){
+            char sexo = request.getParameter("sexo").charAt(0);
+            p.setSexo(sexo);
+        }
+        if(request.getParameter("complemento") != null){
+            String complemento = request.getParameter("complemento");
+            p.setComplemento(complemento);
+        }
+        if(request.getParameter("complemento") != null){
+            String bairro = request.getParameter("bairro");
+            p.setBairro(bairro);
+        }
         String nome = request.getParameter("nome");
-        String rg = request.getParameter("RG");
         String cpf = request.getParameter("CPF");
-        char sexo = request.getParameter("sexo").charAt(0);
         String telefone = request.getParameter("telefone");
         String rua = request.getParameter("rua");
         String num = request.getParameter("num");
-        String complemento = request.getParameter("complemento");
-        String bairro = request.getParameter("bairro");
         String cidade = request.getParameter("cidade");
         String estado = request.getParameter("UF");
               
-        //Precisa implementar dataNas
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
-        String admin = request.getParameter("admin");
         
-        Pessoa p = new Pessoa();
+        if(request.getParameter("admin") != null){
+            String admin = request.getParameter("admin");
+            if(admin.equals("Sim"))
+                p.setAdmin(true);
+            else
+                p.setAdmin(false);
+        }
+        
         p.setNome(nome);
-        p.setRg(rg);
         p.setCpf(cpf);
-        p.setSexo(sexo);
         p.setTelefone(telefone);
+        p.setRua(rua);
+        p.setNumero(num);
+        p.setCidade(cidade);
+        p.setEstado(estado);
         p.setEmail(email);
         p.setSenha(senha);
         
-        if(admin.equals("Sim"))
-            p.setAdmin(true);
-        else
-            p.setAdmin(false);
         
+        if(request.getParameter("antigo") == null){
+            Pessoa antigo = Pessoa.getPessoa(request.getParameter("antigo"));
+            Pessoa.lista.remove(antigo);
+        }
+        Pessoa.lista.add(p);
+
         response.sendRedirect("index.jsp");
     }
 

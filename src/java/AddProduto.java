@@ -55,7 +55,7 @@ public class AddProduto extends HttpServlet {
             Produto antigo = Produto.getProduto(request.getParameter("antigo"));
             Produto.lista.remove(antigo);
         }
-            Produto.lista.add(p);
+        Produto.lista.add(p);
         
         response.sendRedirect("index.jsp");
         

@@ -30,6 +30,24 @@
         <%String categoria = request.getParameter("busca");
         
         if (categoria == null){%>
+            <%-- NOTICIAS --%>
+            <div style="background-color: #bee9e8; margin-top: -1.5%">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 800px; height: 450px; margin: auto;">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner" style="width: 840px; height: 450px; margin: auto; ">
+                  <div class="carousel-item active">
+                        <img src="images/conteudo/Promoção de Verão.png" class="d-block w-100" >
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/conteudo/TEC2.png" class="d-block w-100">
+                    </div>
+                </div>
+            </div>
+            </div>
+            <br/>
             <%-- PROMOÇÃO --%>
             <div class="border-bottom">
                 <span class="badge badge-primary align-items-center text-white" style="background-color: #1b4965; margin-left: auto; font-size: 150%; padding: 0.7%; ">PROMOÇÃO</span>
@@ -54,7 +72,7 @@
                 <span class="badge badge-primary align-items-center text-white" style="background-color: #1b4965; margin-left: auto; font-size: 150%; padding: 0.7%; ">PARA VOCÊ</span>
             </div>            
             <div class="card-deck" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto; margin-top: 10px;">
-        <%  for(i = 0; i <= 6; i++){ %>
+        <%  for(i = 0; i < 6; i++){ %>
             <jsp:include page="card.jsp">
                 <jsp:param name="prod" value="<%= Produto.lista.get(i) %>" />
             </jsp:include>  
@@ -92,7 +110,7 @@
             
                int i = 0;
                for(Produto p: Produto.lista){
-                  if(i % 7 == 0){ %>
+                  if(i % 6 == 0){ %>
                      </div>
                      <div class="card-deck" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto; margin-top: 10px;">
             <%

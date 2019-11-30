@@ -228,7 +228,7 @@
                            
                         <div class="d-flex justify-content-between">
                              <button class="btn btn-lg" onclick="$('.nav-pills a:first').tab('show');event.preventDefault()" style="background-color: #62b6cb; color: white;">Anterior</button>
-                            <button type="submit" class="btn btn-lg" style="background-color: #1b4965; color: white;"><% if(alterar){%> Alterar Cadastro <% } else {%>Adicionar Pessoa <% }%></button>
+                            <button type="submit" <% if(alterar){%> name="antigo" value<%= p%> <% }%> class="btn btn-lg" style="background-color: #1b4965; color: white;"><% if(alterar){%> Alterar Cadastro <% } else {%>Adicionar Pessoa <% }%></button>
                         </div>
                     </div>    
                 </div>                    

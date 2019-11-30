@@ -67,13 +67,13 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text text-white" style="background-color: #1b4965; ">Categoria*</span>
                                 </div>
-                                <select class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="categoria" <% if(alterar){%> value="<%= p.getCategoria()%>" <% }%> required>
-                                    <option selected> </option>
-                                    <option value="Eletronicos">Eletronicos</option>
-                                    <option value="Celulares & Computadores">Celulares & Computadores</option>
-                                    <option value="Roupas">Roupas</option>
-                                    <option value="Casa & Mobilia">Casa & Mobilia</option>
-                                    <option value="Outros">Outros</option>
+                                <select class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="categoria" required>
+                                    <option <% if(!alterar){%>selected<% }%> > </option>
+                                    <option value="eletronicos" <% if(p.getCategoria().equals("eletronicos")){%>selected<% }%>>Eletronicos</option>
+                                    <option value="celulares-computadores" <% if(p.getCategoria().equals("celulares-computadores")){%>selected<% }%>>Celulares & Computadores</option>
+                                    <option value="roupas" <% if(p.getCategoria().equals("roupas")){%>selected<% }%>>Roupas</option>
+                                    <option value="casa-mobilha" <% if(p.getCategoria().equals("casa-mobilha")){%>selected<% }%>>Casa & Mobilha</option>
+                                    <option value="outros" <% if(p.getCategoria().equals("outros")){%>selected<% }%>>Outros</option>
                                 </select>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965; ">Descrição*</span>
                         </div>
-                        <textarea type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="descricao" <% if(alterar){%> value="<%= p.getDescricao()%>" <% }%> style="min-height: 100px" placeholder="Dados do produto" required></textarea>
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="descricao" <% if(alterar){%> value="<%= p.getDescricao()%>" <% }%> style="min-height: 100px" placeholder="Dados do produto" required/>
                     </div>
                     <div class="input-group-lg mb-3">
                         <div class="input-group-prepend">
@@ -122,10 +122,14 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text text-white" id="inputGroup-sizing-default" style="background-color: #1b4965; ">Imagens*</span>
                         </div>
-                        <textarea type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="imagens" <% if(alterar){%> value="<%= p.getImagens()%>" <% }%> style="min-height: 100px" placeholder="URL da imagens separada por  ', '" required></textarea>
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-sm" name="imagens" <% if(alterar){%> value="<%= p.getImagens()%>" <% }%> style="min-height: 100px" placeholder="separe as imagens com ', '" required/>
                     </div>
+                    
+                <%  if(alterar){%>  
+                <input name="antigo" value="<%= p%>" style="display: none;"/>
+                <%  }%>
 
-                    <button type="submit" class="btn btn-lg" style="background-color: #1b4965; color: white;">Adicionar Produto</button>
+                    <button type="submit" class="btn btn-lg" style="background-color: #1b4965; color: white;"><% if(alterar){%> Modificar Produto <% } else{ %>Adicionar Produto<% }%></button>
 
                 </div>
 

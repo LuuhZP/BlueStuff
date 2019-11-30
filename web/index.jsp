@@ -21,7 +21,7 @@
 
     </head>
     <body>
-        <
+        
         <jsp:include page="menu.jsp">
             <jsp:param name="navInferior" value="1" />
         </jsp:include> 
@@ -87,15 +87,14 @@
         <div class="border-bottom">
             <span class="badge badge-primary align-items-center text-white" style="background-color: #1b4965; margin-left: auto; font-size: 150%; padding: 0.7%; "><%= categoria.toUpperCase().replaceAll("-", " & ") %></span>
         </div>
-
-         <div class="card-deck" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto; margin-top: 10px;">
+        <div class="card-deck" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto; margin-top: 10px;">
             <%
             
                int i = 0;
                for(Produto p: Produto.lista){
                   if(i % 7 == 0){ %>
                      </div>
-                     <div class="card-deck" style="max-width:100%; max-height:300px; width: auto; height: auto; margin: auto; margin-top: 10px;">
+                     <div class="card-deck" style="max-width:90%; max-height:300px; width: auto; height: auto; margin: auto; margin-top: 10px;">
             <%
                     i++;
                 }else{

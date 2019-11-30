@@ -2,7 +2,6 @@
 package modelos;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Pessoa {
 
@@ -11,7 +10,7 @@ public class Pessoa {
    private String cpf;
    private char sexo;
    private String telefone;
-   private Date dataNas;
+   private String dataNas;
    private String cep;
    private String rua;
     private String numero;
@@ -89,11 +88,11 @@ public class Pessoa {
       this.telefone = telefone;
    }
 
-   public Date getDataNas() {
+   public String getDataNas() {
       return dataNas;
    }
 
-   public void setDataNas(Date dataNas) {
+   public void setDataNas(String dataNas) {
       this.dataNas = dataNas;
    }
 

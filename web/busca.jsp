@@ -4,6 +4,8 @@
     Author     : cfeva
 --%>
 
+<%@page import="java.util.Comparator"%>
+<%@page import="java.util.Collections"%>
 <%@page import="modelos.Produto"%>
 <%@page import="modelos.Pessoa"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -77,6 +79,13 @@
                 </thead>
                 <tbody>
                     <% if(isProduto) {
+                    Collections.sort(Produto.lista, new Comparator<Produto>() {
+                        @Override
+                        public int compare(Produto p1, Produto p2) {
+                            return (p1.getTitulo()).compareTo(p2.getTitulo());
+                        }
+
+                    });
                     for (int i = 0; i < Produto.lista.size(); i++) {
 
                         Produto p = Produto.lista.get(i);

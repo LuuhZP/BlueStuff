@@ -27,6 +27,13 @@ public class AddPessoa extends HttpServlet {
         String cpf = request.getParameter("CPF");
         char sexo = request.getParameter("sexo").charAt(0);
         String telefone = request.getParameter("telefone");
+        String rua = request.getParameter("rua");
+        String num = request.getParameter("num");
+        String complemento = request.getParameter("complemento");
+        String bairro = request.getParameter("bairro");
+        String cidade = request.getParameter("cidade");
+        String estado = request.getParameter("UF");
+              
         //Precisa implementar dataNas
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");

@@ -34,7 +34,7 @@ public class Produto {
     public String getImagens(){
         String img = "";
         for(String s : listaImg)
-            img += ", " + s;
+            img += s + ", ";
         return img;
     }
 

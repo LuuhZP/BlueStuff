@@ -21,40 +21,41 @@ public class AddProduto extends HttpServlet {
     public void doPost( HttpServletRequest request,
                         HttpServletResponse response
             )throws ServletException, IOException{
+        Produto p = new Produto();
         
-        String titulo = request.getParameter("titulo");
-        
-        String categoria = request.getParameter("categoria");
-        
+        String titulo = request.getParameter("titulo");        
+        String categoria = request.getParameter("categoria");        
         float preco = Float.parseFloat(
                 request.getParameter("preco")
-        );
-        
-        float desconto = Float.parseFloat(
-                request.getParameter("desconto")
-        );
-        
-        int quantidade = Integer.parseInt(
-                request.getParameter("quantidade")
-        );
-        
-        String descricao = request.getParameter("descricao");
-        
-        String keywords = request.getParameter("keywords");
-        
+        );        
+        if(request.getParameter("desconto") != null){
+            float desconto = Float.parseFloat(
+                    request.getParameter("desconto")
+            );
+            p.setDesconto(desconto);
+        }        
+        if(request.getParameter("quantidade") != null){
+            int quantidade = Integer.parseInt(
+                    request.getParameter("quantidade")
+            );
+            p.setQuantidade(quantidade);
+        }        
+        String descricao = request.getParameter("descricao");        
+        String keywords = request.getParameter("keywords");        
         String imagem = request.getParameter("imagens");
         
-        Produto p = new Produto();
         p.setTitulo(titulo);
         p.setCategoria(categoria);
         p.setPreco(preco);
-        p.setDesconto(desconto);
-        p.setQuantidade(quantidade);
         p.setDescricao(descricao);
         p.setKeyWords(keywords);
         p.listaImg.add(imagem);
         
-        Produto.lista.add(p);   
+        if(request.getParameter("antigo") == null){
+            Produto antigo = Produto.getProduto(request.getParameter("antigo"));
+            Produto.lista.remove(antigo);
+        }
+            Produto.lista.add(p);
         
         response.sendRedirect("index.jsp");
         

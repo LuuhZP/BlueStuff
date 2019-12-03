@@ -37,11 +37,6 @@
        <img src="images/logo_transparent (5).png" alt="" width="150px" style="display: block; margin-top: -80px; "/>
     </a>
     
-    <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="O que você proucura?" aria-label="Search" >
-        <span class="border border-warning rounded-pill"><button class="btn btn-outline-warning rounded-pill" type="submit">Buscar</button></span>
-    </form>
-    
     <%
             boolean logado = false;
             

@@ -362,8 +362,111 @@ public class Mock {
             oppoa5.setKeyWords("oppo a5 android");
             oppoa5.setCategoria("celulares-computadores");
             lista.add(oppoa5);
+            
+            Produto mesa = new Produto();
+            mesa.setTitulo("Mesa de Trabalho");
+            mesa.setDescricao("Sua criança precisa de um cantinho especial para poder ler, escrever, desenhar e estudar, onde ela possa desenvolver sua criatividade e otimizar seu aprendizado divertindo-se. Esta charmosíssima Mesa Country Infantil é uma ótima opção para criar um ambiente fértil para o desenvolvimento da criança. Seu design é absolutamente encantador, contribuindo para uma decoração diferenciada do cômodo.");
+            mesa.setPreco(185.49f);
+            mesa.setDesconto(0f);
+            mesa.listaImg.add("https://staticmobly.akamaized.net/p/EcomC3B3veis-Mesa-Retangular-Country-Infantil-52x68-cm-Azul-4016-14549-1-zoom.jpg");
+            mesa.listaImg.add("https://staticmobly.akamaized.net/p/EcomC3B3veis-Mesa-Retangular-Country-Infantil-52x68-cm-Azul-8175-14549-2-zoom.jpg");
+            mesa.setQuantidade(312);
+            mesa.setKeyWords("mesa azul movel trabalho");
+            mesa.setCategoria("casa-mobilia");
+            lista.add(mesa);
+            
+            Produto cadeira = new Produto();
+            cadeira.setTitulo("Cadeira plus dark blue ");
+            cadeira.setDescricao("Espaldar médio. Revestimento em tecido poliéster crepe. Encosto com regulagem de altura, regulagem de altura no braço, mecanismo de contato permanente com regulagem de inclinação somente do encosto, com regulagem de altura do assento com coluna a gás, base injetada (resina termoplástica) e rodízios com 50mm de diâmetro.");
+            cadeira.setPreco(585.57f);
+            cadeira.setDesconto(20f);
+            cadeira.listaImg.add("https://assets.betalabs.net/production/flexform/item-images/c05a3d61d83d2a266d6ee9110a4a4a40.JPG");
+            cadeira.listaImg.add("https://assets.betalabs.net/production/flexform/item-images/52ef522f0ec034fd3dbbb5be5b2e4ff7.jpg");
+            cadeira.listaImg.add("https://assets.betalabs.net/production/flexform/item-images/de3d4d41323da68657b60e239b42db27.jpg");
+            cadeira.listaImg.add("https://assets.betalabs.net/production/flexform/item-images/674084390904c85341bf5a66352abcb5.jpg");
+            cadeira.listaImg.add("https://assets.betalabs.net/production/flexform/item-images/42ea25e54c21ae4cace288ac8f4fa230.png");
+            cadeira.setQuantidade(25);
+            cadeira.setKeyWords("cadeira azul movel rodas");
+            cadeira.setCategoria("casa-mobilia");
+            lista.add(cadeira);
+            
+            Produto berco = new Produto();
+            berco.setTitulo("Kit Berço Trança Nuvem de Amor Azul");
+            berco.setDescricao("O Kit Berço Menino Trança Nuvem de Amor Azul é um produto exclusivo da Grão de Gente, maior marca da América Latina em enxoval e decoração para quarto de bebê. Um conjunto completo com tudo o que você precisa para aconchegar e proteger seu menino. O protetor lateral e a cabeceira vêm com zíper, para facilitar a lavagem, e amarril, para fixação no berço. ");
+            berco.setPreco(169.50f);
+            berco.setDesconto(0f);
+            berco.listaImg.add("https://dmhxz00kguanp.cloudfront.net/fotos/135248/kit-berco-tranca-nuvem-de-amor-azul-291226.jpg");
+            berco.listaImg.add("https://dmhxz00kguanp.cloudfront.net/fotos/135248/kit-berco-tranca-nuvem-de-amor-azul-291224.jpg");
+            berco.setQuantidade(34);
+            berco.setKeyWords("berço azul movel dormir cama");
+            berco.setCategoria("casa-mobilia");
+            lista.add(berco);
 
+            Produto mala = new Produto();
+            mala.setTitulo("Conjunto de Malas 3 Peças Yins com Giro 360º - YS21055AM Azul Marinho");
+            mala.setDescricao("Na hora de armazenar os objetos e roupas para viagem, sem dúvida, pensamos em espaço, segurança e qualidade das bagagens. Então, conheça o conjunto de malas Yins YS21055AM. Ele ideal tanto para viagens curtas quanto longas, pois nele contemplam 03 peças. Todas as malas são fabricadas em ABS, tem um amplo compartimento, design moderno com abertura em zíper, rodinhas que giram em 360o para facilitar no manuseio e o cadeado é integrado para melhor proteção. Sem falar da cor azul marinho que resulta num acabamento elegante e charmoso. ");
+            mala.setPreco(499.99f);
+            mala.setDesconto(0f);
+            mala.listaImg.add("https://a-static.mlcdn.com.br/618x463/conjunto-de-malas-3-pecas-yins-com-giro-360o-ys21055am-azul-marinho/magazineluiza/223889600/11c0bb1c1e0dc76b5a092f0be872ba12.jpg");
+            mala.listaImg.add("https://a-static.mlcdn.com.br/618x463/conjunto-de-malas-3-pecas-yins-com-giro-360o-ys21055am-azul-marinho/magazineluiza/223889600/d04e5ae47f898a8341b060e980ba4703.jpg");
+            mala.setQuantidade(323);
+            mala.setKeyWords("mala azul movel viajar guardar roupa");
+            mala.setCategoria("casa-mobilia");
+            lista.add(mala);
 
+            Produto sofa = new Produto();
+            sofa.setTitulo("Sofá 3 Lugares Genova Retrátil e Reclinável Abitare 658");
+            sofa.setDescricao("Sofá 3 Lugares Genova Retrátil e Reclinável Abitare 658. O estofado Genova oferece conforto e um visual moderno. Com seu assento retrátil e seu encosto reclinável proporciona ainda mais conforto atendendo a todas os desejos de seus compradores.");
+            sofa.setPreco(799.99f);
+            sofa.setDesconto(0f);
+            sofa.listaImg.add("https://a-static.mlcdn.com.br/618x463/sofa-3-lugares-genova-retratil-e-reclinavel-abitare-658/lojasmm/7175/b232a2c9f0bbac71d67d1ec54887f01a.jpg");
+            sofa.setQuantidade(12);
+            sofa.setKeyWords("sofa azul movel dormir sala");
+            sofa.setCategoria("casa-mobilia");
+            lista.add(sofa);
+
+            Produto puff = new Produto();
+            puff.setTitulo("Puff Multiuso 3 em 1 Casal Azul Tecido Corvin com Travesseiro Bf Colchões");
+            puff.setDescricao("Puff estilo clássico; Muito confortavel; Prático; Fácil de Limpar");
+            puff.setPreco(269.99f);
+            puff.setDesconto(0f);
+            puff.listaImg.add("https://images-shoptime.b2w.io/produtos/01/00/img/13696/5/13696535_1GG.jpg");
+            puff.listaImg.add("https://images-shoptime.b2w.io/produtos/01/00/img/13696/5/13696535_2GG.jpg");
+            puff.listaImg.add("https://images-shoptime.b2w.io/produtos/01/00/img/13696/5/13696535_3GG.jpg");
+            puff.listaImg.add("https://images-shoptime.b2w.io/produtos/01/00/img/13696/5/13696535_4GG.jpg");
+            puff.setQuantidade(812);
+            puff.setKeyWords("sofa cama puff azul movel dormir sala quarto");
+            puff.setCategoria("casa-mobilia");
+            lista.add(puff);
+
+            Produto gr = new Produto();
+            gr.setTitulo("ROUPEIRO CASAL GUARDA-ROUPA MDF 3 PORTAS");
+            gr.setDescricao("O Guarda-Roupa 3 portas Moore vai ficar lindo em seu quarto ou no quarto de seus filhos, afinal ele possui design leve, livre de excessos e combina o mdf com detalhes de muito bom gosto em madeira maciça.");
+            gr.setPreco(1502.33f);
+            gr.setDesconto(0f);
+            gr.listaImg.add("https://www.ideastore.com.br/thumbs/produtos/52morp3pbrag-1-roupeiro-casal-guarda-roupas-mdf-3-portas-branco-azul-madeira-design-moderno-para-quarto-de-menino-woodinn-ideastore-tokstok-oppa-panteon-lthumb_w800.jpg?0.1.i");
+            gr.listaImg.add("https://www.ideastore.com.br/thumbs/produtos/694morp3pbrag-2-roupeiro-casal-guarda-roupas-mdf-3-portas-branco-azul-madeira-design-moderno-para-quarto-de-menino-woodinn-ideastore-muma-mobly-armario-bonthumb_w800.jpg?0.1.i");
+            gr.listaImg.add("https://www.ideastore.com.br/thumbs/produtos/530morp3pbrag-4-roupeiro-casal-guarda-roupas-mdf-3-portas-branco-azul-madeira-design-moderno-para-quarto-de-menino-woodinn-ideastorethumb_w800.jpg?0.1.i");
+            gr.listaImg.add("https://www.ideastore.com.br/thumbs/produtos/116@morp3pbrag-3-roupeiro-casal-guarda-roupas-mdf-3-portas-branco-azul-madeira-design-moderno-para-quarto-de-menino-woodinn-ideastore-meumoveldemdeira-soho-thumb_w800.jpg?0.1.i");
+            gr.setQuantidade(120);
+            gr.setKeyWords("azul movel dormir guarda roupa moderno quarto");
+            gr.setCategoria("casa-mobilia");
+            lista.add(gr);
+
+            Produto gaveteiro = new Produto();
+            gaveteiro.setTitulo("Gaveteiro com 4 Gavetas Lucy");
+            gaveteiro.setDescricao("Gaveteiros são itens indispensáveis para organizar papéis e outros objetos que você queira ter fácil acesso. O gaveteiro Lucy possui cores vivas que quebram a monotonia de qualquer ambiente sem tirar a sobriedade. São 4 gavetas, sendo uma com sistema de fechamento à chave. A estrutura do gaveteiro é de chapa de aço com pintura epóxi, conferindo resistência e qualidade. Muito versátil, pode ser usado como um organizador em escritórios ou como criado-mudo. ");
+            gaveteiro.setPreco(479.99f);
+            gaveteiro.setDesconto(0f);
+            gaveteiro.listaImg.add("https://www.etna.com.br/medias/sys_master/images/images/hd7/h28/9497512738846/0390534-01.jpg");
+            gaveteiro.listaImg.add("https://www.etna.com.br/medias/sys_master/images/images/h60/hf4/9497512312862/0390534-02.jpg");
+            gaveteiro.listaImg.add("https://www.etna.com.br/medias/sys_master/images/images/h2a/ha8/9497512476702/0390534-03.jpg");            
+            gaveteiro.setQuantidade(80);
+            gaveteiro.setKeyWords("azul movel rodinha guarda roupa moderno quarto");
+            gaveteiro.setCategoria("casa-mobilia");
+            lista.add(gaveteiro);
+
+              
         }
     }
 

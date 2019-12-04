@@ -372,7 +372,7 @@ public class Mock {
             mesa.listaImg.add("https://staticmobly.akamaized.net/p/EcomC3B3veis-Mesa-Retangular-Country-Infantil-52x68-cm-Azul-8175-14549-2-zoom.jpg");
             mesa.setQuantidade(312);
             mesa.setKeyWords("mesa azul movel trabalho");
-            mesa.setCategoria("casa-mobilia");
+            mesa.setCategoria("casa-mobilha");
             lista.add(mesa);
             
             Produto cadeira = new Produto();
@@ -387,11 +387,11 @@ public class Mock {
             cadeira.listaImg.add("https://assets.betalabs.net/production/flexform/item-images/42ea25e54c21ae4cace288ac8f4fa230.png");
             cadeira.setQuantidade(25);
             cadeira.setKeyWords("cadeira azul movel rodas");
-            cadeira.setCategoria("casa-mobilia");
+            cadeira.setCategoria("casa-mobilha");
             lista.add(cadeira);
             
             Produto berco = new Produto();
-            berco.setTitulo("Kit Berço Trança Nuvem de Amor Azul");
+            berco.setTitulo("Kit Berço Trança Nuvem de Amor");
             berco.setDescricao("O Kit Berço Menino Trança Nuvem de Amor Azul é um produto exclusivo da Grão de Gente, maior marca da América Latina em enxoval e decoração para quarto de bebê. Um conjunto completo com tudo o que você precisa para aconchegar e proteger seu menino. O protetor lateral e a cabeceira vêm com zíper, para facilitar a lavagem, e amarril, para fixação no berço. ");
             berco.setPreco(169.50f);
             berco.setDesconto(0f);
@@ -399,11 +399,11 @@ public class Mock {
             berco.listaImg.add("https://dmhxz00kguanp.cloudfront.net/fotos/135248/kit-berco-tranca-nuvem-de-amor-azul-291224.jpg");
             berco.setQuantidade(34);
             berco.setKeyWords("berço azul movel dormir cama");
-            berco.setCategoria("casa-mobilia");
+            berco.setCategoria("casa-mobilha");
             lista.add(berco);
 
             Produto mala = new Produto();
-            mala.setTitulo("Conjunto de Malas 3 Peças Yins com Giro 360º - YS21055AM Azul Marinho");
+            mala.setTitulo("Conjunto de Malas 3 Peças");
             mala.setDescricao("Na hora de armazenar os objetos e roupas para viagem, sem dúvida, pensamos em espaço, segurança e qualidade das bagagens. Então, conheça o conjunto de malas Yins YS21055AM. Ele ideal tanto para viagens curtas quanto longas, pois nele contemplam 03 peças. Todas as malas são fabricadas em ABS, tem um amplo compartimento, design moderno com abertura em zíper, rodinhas que giram em 360o para facilitar no manuseio e o cadeado é integrado para melhor proteção. Sem falar da cor azul marinho que resulta num acabamento elegante e charmoso. ");
             mala.setPreco(499.99f);
             mala.setDesconto(0f);
@@ -411,22 +411,22 @@ public class Mock {
             mala.listaImg.add("https://a-static.mlcdn.com.br/618x463/conjunto-de-malas-3-pecas-yins-com-giro-360o-ys21055am-azul-marinho/magazineluiza/223889600/d04e5ae47f898a8341b060e980ba4703.jpg");
             mala.setQuantidade(323);
             mala.setKeyWords("mala azul movel viajar guardar roupa");
-            mala.setCategoria("casa-mobilia");
+            mala.setCategoria("casa-mobilha");
             lista.add(mala);
 
             Produto sofa = new Produto();
-            sofa.setTitulo("Sofá 3 Lugares Genova Retrátil e Reclinável Abitare 658");
+            sofa.setTitulo("Sofá 3 Lugares Genova Retrátil");
             sofa.setDescricao("Sofá 3 Lugares Genova Retrátil e Reclinável Abitare 658. O estofado Genova oferece conforto e um visual moderno. Com seu assento retrátil e seu encosto reclinável proporciona ainda mais conforto atendendo a todas os desejos de seus compradores.");
             sofa.setPreco(799.99f);
             sofa.setDesconto(0f);
             sofa.listaImg.add("https://a-static.mlcdn.com.br/618x463/sofa-3-lugares-genova-retratil-e-reclinavel-abitare-658/lojasmm/7175/b232a2c9f0bbac71d67d1ec54887f01a.jpg");
             sofa.setQuantidade(12);
             sofa.setKeyWords("sofa azul movel dormir sala");
-            sofa.setCategoria("casa-mobilia");
+            sofa.setCategoria("casa-mobilha");
             lista.add(sofa);
 
             Produto puff = new Produto();
-            puff.setTitulo("Puff Multiuso 3 em 1 Casal Azul Tecido Corvin com Travesseiro Bf Colchões");
+            puff.setTitulo("Puff Multiuso 3 em 1");
             puff.setDescricao("Puff estilo clássico; Muito confortavel; Prático; Fácil de Limpar");
             puff.setPreco(269.99f);
             puff.setDesconto(0f);
@@ -436,11 +436,11 @@ public class Mock {
             puff.listaImg.add("https://images-shoptime.b2w.io/produtos/01/00/img/13696/5/13696535_4GG.jpg");
             puff.setQuantidade(812);
             puff.setKeyWords("sofa cama puff azul movel dormir sala quarto");
-            puff.setCategoria("casa-mobilia");
+            puff.setCategoria("casa-mobilha");
             lista.add(puff);
 
             Produto gr = new Produto();
-            gr.setTitulo("ROUPEIRO CASAL GUARDA-ROUPA MDF 3 PORTAS");
+            gr.setTitulo("ROUPEIRO CASAL GUARDA-ROUPA");
             gr.setDescricao("O Guarda-Roupa 3 portas Moore vai ficar lindo em seu quarto ou no quarto de seus filhos, afinal ele possui design leve, livre de excessos e combina o mdf com detalhes de muito bom gosto em madeira maciça.");
             gr.setPreco(1502.33f);
             gr.setDesconto(0f);
@@ -450,7 +450,7 @@ public class Mock {
             gr.listaImg.add("https://www.ideastore.com.br/thumbs/produtos/116@morp3pbrag-3-roupeiro-casal-guarda-roupas-mdf-3-portas-branco-azul-madeira-design-moderno-para-quarto-de-menino-woodinn-ideastore-meumoveldemdeira-soho-thumb_w800.jpg?0.1.i");
             gr.setQuantidade(120);
             gr.setKeyWords("azul movel dormir guarda roupa moderno quarto");
-            gr.setCategoria("casa-mobilia");
+            gr.setCategoria("casa-mobilha");
             lista.add(gr);
 
             Produto gaveteiro = new Produto();
@@ -463,8 +463,65 @@ public class Mock {
             gaveteiro.listaImg.add("https://www.etna.com.br/medias/sys_master/images/images/h2a/ha8/9497512476702/0390534-03.jpg");            
             gaveteiro.setQuantidade(80);
             gaveteiro.setKeyWords("azul movel rodinha guarda roupa moderno quarto");
-            gaveteiro.setCategoria("casa-mobilia");
+            gaveteiro.setCategoria("casa-mobilha");
             lista.add(gaveteiro);
+
+	    Produto liquidificador = new Produto();
+	    liquidificador.setTitulo("Liquidificador 1200w Philco");
+            liquidificador.setDescricao("Agora você pode contar com o Liquidificador Ph900 Aze da Philco, um aparelho de alta potência para preparar sucos, vitaminas, coquetéis, sopas, molhos, cremes e muito mais! Contém 12 velocidades, Função Pulsar e Variação de velocidade para diferentes receitas.");
+            liquidificador.setPreco(89.91f);
+            liquidificador.setDesconto(10f);
+            liquidificador.listaImg.add("https://images-submarino.b2w.io/produtos/01/00/img/1240873/9/1240873951_1GG.jpg");
+            liquidificador.listaImg.add("https://images-submarino.b2w.io/produtos/01/00/img/1240873/9/1240873951_2GG.jpg");
+	    liquidificador.setQuantidade(80);
+ 	    liquidificador.setCategoria("eletronico");
+            lista.add(liquidificador);
+
+	    Produto gril = new Produto();
+	    gril.setTitulo("Mini Grill e Sanduicheira Philco Inox");
+            gril.setDescricao("Agora você pode contar com o Liquidificador Ph900 Aze da Philco, um aparelho de alta potência para preparar sucos, vitaminas, coquetéis, sopas, molhos, cremes e muito mais! Contém 12 velocidades, Função Pulsar e Variação de velocidade para diferentes receitas.");
+            gril.setPreco(99.99f);
+            gril.setDesconto(0f);
+            gril.listaImg.add("https://www.casasbahia-imagens.com.br/Eletroportateis/GrilleSanduicheiras/sanduicheiragrill/8521287/450443568/Sanduicheira-Grill-Philco-Mini-Grill-em-Aco-Escovado-Inox-Azul-8521287.jpg");
+            gril.listaImg.add("https://www.casasbahia-imagens.com.br/Eletroportateis/GrilleSanduicheiras/sanduicheiragrill/8521288/450443436/Sanduicheira-Grill-Philco-Mini-Grill-em-Aco-Escovado-Inox-Azul-8521287.jpg");
+	    gril.setQuantidade(80);
+ 	    gril.setCategoria("eletronico");
+            lista.add(gril);
+
+
+	    Produto cafe = new Produto();
+	    cafe.setTitulo("Cafeteira Cadence Single");
+            cafe.setDescricao("É muito fácil de usar: basta utilizar a colher medidora, escolher a quantidade de café, ligar a cafeteira e em poucos minutos seu café estará pronto! O filtro, permanente e removível, proporciona rapidez e praticidade na hora de preparar o café.");
+            cafe.setPreco(79.99f);
+            cafe.setDesconto(0f);
+            cafe.listaImg.add("https://www.casasbahia-imagens.com.br/Eletroportateis/Cafeteiras/CafeteirasEletricas/2341073/243794839/cafeteira-single-colors-cadence-caf113-prepara-2-cafes-com-filtro-permanente-e-removivel-450w-azul-2341072.jpg");
+            cafe.listaImg.add("https://www.casasbahia-imagens.com.br/Eletroportateis/Cafeteiras/CafeteirasEletricas/2341073/243794841/cafeteira-single-colors-cadence-caf113-prepara-2-cafes-com-filtro-permanente-e-removivel-450w-azul-2341072.jpg");
+	    cafe.setQuantidade(80);
+	    cafe.setCategoria("eletronico");
+            lista.add(cafe);
+
+	    
+	    Produto forno = new Produto();
+	    forno.setTitulo("FORNO ELETRICO LUXO 45L CLASSIC");
+            forno.setDescricao("Características do ProdutoTipo: Forno de BancadaLuz no Forno: SimPrateleiras do Forno: Uma FixaRevestimento Forno AutolimpanteControle de Temperatura: SimTemperatura: 50°C até 300°CFunção Grill: Sim");
+            forno.setPreco(399.99f);
+            forno.setDesconto(0f);
+            forno.listaImg.add("https://images-americanas.b2w.io/produtos/01/00/img/650339/6/650339621_1GG.jpg");
+            forno.listaImg.add("https://images-americanas.b2w.io/produtos/01/00/img/650339/6/650339621_2GG.jpg");
+	    forno.setCategoria("eletronico");
+	    forno.setQuantidade(80);
+            lista.add(forno);
+
+	    Produto fogao = new Produto();
+	    fogao.setTitulo("Fogão a Gás Delplus");
+            fogao.setDescricao("<p>Características do Produto</p><p>Tipo: Fogão de Piso<br>Acendimento: Automático<br>Queimadores: 1 Grande e 3 Médios<br>Trempe dos Queimadores: Individual Esmaltada<br>Mesa Queimadores: Vidro Preto<br>Base das Trempes: Esmaltada na cor Preta<br>Botões: Removíveis<br>Válvula de Segurança: Sim<br>Luz no Forno: Não<br>Prateleiras do Forno: Uma Regulável<br>Revestimento do Forno: Esmalte Easy Clean<br>Temperatura: 5 posições de 180°C Até 290°C<br>Função Grill: Não<br>Timer Grill: Não<br>Timer Gás: Não<br>Espeto Giratório: Não<br>Bandeja Coletora de Resíduos: Não<br>Porta Removível: Sim<br>Porta do Forno: Vidro Preto<br>Vidro Duplo na Porta: Sim<br>Puxador da Porta: Aço na Cor Azul<br>Estufa: Fixa<br>Entrada de Gás: Uma Entrada (Lado Esquerdo Visto de Frente)<br>Cores das Laterais: Preto Fosco<br>Marca: Venax</p><p>Especificações Técnicas</p><p>Alimentação: Gás GLP<br>Tensão: Bivolt<br>Frequência: 50/60Hz<br>Classificação Energética: ”A”<br>Etiquetas: ENCE e CONPET<br>Garantia: 1 Ano<br>Potência do Queimador do Forno: 2,30 kW<br>Potência Queimadores Mesa: 1,80 kW(Queim.Grande), 1,35 kW(Queim.Médio)<br>Dimensões Internas do Forno(LxPxA): 378x470x290(mm)<br>Volume do Forno: 51,8L</p><p> </p><p>ESPECIFICAÇÕES:<br>Fornecedor: Venax<br>Medida do produto: 48x61x88 cm (LxCxA)<br>Peso do produto: 25500 gramas<br>Itens inclusos: 1 Fogão a gás<br>Material (Composição): Aço Revestido com Pintura Eletrostática<br>Medida da embalagem: 49x63x89 cm (LxCxA)<br>Peso da embalagem: 28000 gramas<br>Referência: DELMV450.BV.GLP.AZ<br>EAN: 7899552140394<br>Código: 710413361</p><p>Outras Informações e Instruções de uso:</p>");
+            fogao.setPreco(679.99f);
+            fogao.setDesconto(0f);
+            fogao.listaImg.add("https://images-submarino.b2w.io/produtos/01/00/img/1200950/2/1200950220_1GG.jpg");
+            fogao.listaImg.add("https://images-submarino.b2w.io/produtos/01/00/img/1200950/2/1200950220_2GG.jpg");
+	    fogao.setQuantidade(80);
+	    fogao.setCategoria("eletronico");
+            lista.add(fogao);
 
               
         }

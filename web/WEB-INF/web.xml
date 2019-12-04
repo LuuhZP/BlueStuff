@@ -36,6 +36,10 @@
         <servlet-name>EditCarrinho</servlet-name>
         <servlet-class>EditCarrinho</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BuscaProd</servlet-name>
+        <servlet-class>BuscaProd</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Teste</servlet-name>
         <url-pattern>/Teste</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>EditCarrinho</servlet-name>
         <url-pattern>/EditCarrinho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuscaProd</servlet-name>
+        <url-pattern>/BuscaProd</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

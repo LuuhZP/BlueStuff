@@ -37,6 +37,13 @@
        <img src="images/logo_transparent (5).png" alt="" width="150px" style="display: block; margin-top: -80px; "/>
     </a>
     
+    <form class="form-inline" action="BuscaProd" method="post">
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" name="busca" placeholder="Produto">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+    </form>
+    
     <%
             boolean logado = false;
             

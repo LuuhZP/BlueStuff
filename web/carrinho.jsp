@@ -147,7 +147,7 @@
                     <div class="p-3">
                         <p class="font-italic mb-4">Os custos de envio e adicionais são calculados com base nos valores inseridos.</p>
                         <ul class="list-unstyled mb-4">
-                            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Subtotal</strong><strong>R$<%=subtotal%>.00</strong></li>
+                            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Subtotal</strong><strong>R$<%=subtotal%></strong></li>
                             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Envio e manejo</strong><strong>R$<%
                               
                                 if (subtotal == 0) {
